@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<works>
+	<project>
+		<category>Front End Software</category>
+		<title>RicochetMedia.net</title>
+		<image>images/works/ricochet.jpg</image>
+		<link>http://ricochetmedia.net</link>
+		<blurb>I've developed the front end for a social media merketing platform for publishers &amp; advertisers.</blurb>
+	</project>
+	<project>
+		<category>Graphics Programming</category>
+		<title>About WebGL</title>
+		<image>images/works/bunny.jpg</image>
+		<link>http://bobbyroe.com/wgl/about/</link>
+		<blurb>An introduction to WebGL (without libraries!) see the &lt;a href='https://vimeo.com/69136718' target='_blank'&gt;video&lt;/a&gt;</blurb>
+	</project>
+
+	<project>
+		<category>Graphics Programming</category>
+		<title>THREE.js experiments</title>
+		<image>images/works/three.jpg</image>
+		<link>https://github.com/bobbyroe/Three-Experiments</link>
+		<blurb>Some art + code experiements with Three.js</blurb>
+	</project>
+
+	<project>
+		<category>iOS Development</category>
+		<title>TapSynth</title>
+		<image>images/works/tapsynth.jpg</image>
+		<link>http://tapsynth.com</link>
+		<blurb>I built an iOS app! From concept to App store in 2 months. TapSynth puts an exclamation mark on a year and a half of Objective-C study. Site design by Danielle Primiceri.</blurb>
+	</project>
+	<project>
+		<category>Visual Effects</category>
+		<title>CG Effects Reel</title>
+		<image>images/works/reel.jpg</image>
+		<link>http://vimeo.com/15575038</link>
+		<blurb>My Visual Effects Reel, including personal &amp; commercial works from the past 5 years. Software skills include Maya, After Effects, Real Flow &amp; Boujou.</blurb>
+	</project>
+	<project>
+		<category>Flash Development</category>
+		<title>Galaxy 61</title>
+		<image>images/works/g61.jpg</image>
+		<link>http://www.galaxy61.com</link>
+		<blurb>Doug Johnson designed &amp; I built this sweet flash site. Skills: Actionscript, Javascript, XHTML &amp; Flash.</blurb>
+	</project>
+	<project>
+		<category>WebGL Experiment</category>
+		<title>Most Popular Emoji</title>
+		<image>images/works/emoji.jpg</image>
+		<link>http://bobbyroe.com/other/3js/emoji/</link>
+		<blurb>Most used Emojis between me &amp; my wife, Eleanor for the month of July 2011. Built with Mr Doob's Three.js</blurb>
+	</project>
+	<project>
+		<category>Web Development</category>
+		<title>Grant Delin Photographer</title>
+		<image>images/works/gdelin.jpg</image>
+		<link>http://www.gdelin.com</link>
+		<blurb>Showcase for the stunning work of Photographer Grant Delin. Actionscript, JS, XML &amp; HTML. Designed by Martin Iselt.</blurb>
+	</project>
+	<project>
+		<category>Flash Programming</category>
+		<title>NYT Marketing Content Cloud</title>
+		<image>images/works/contentCloud.jpg</image>
+		<link>http://www.nytimes.com/2011/04/20/arts/design/wildenstein-art-gallery-is-beset-by-lawsuits.html?c0ntentCl0ud</link>
+		<blurb>A production-ready prototype built for The NYTimes.com marketing team. A fun way to explore content in an enormous ad unit (896px x 648px). I did all the AS/Flash work. Designed by Brandon Melchior.</blurb>
+	</project>
+	<project>
+		<category>WebGL Experiment</category>
+		<title>NYTimes.com Most Popular Topics</title>
+		<image>images/works/NYTMostPop.jpg</image>
+		<link>http://bobbyroe.com/nyt/viz/?test</link>
+		<blurb>This web app pulls a feed from NYTimes.com search API and parses the most popular topics. Built with Three.js &amp; jQuery.</blurb>
+	</project>
+	<project>
+		<category>Flash Development</category>
+		<title>David Scott Interiors</title>
+		<image>images/works/dsi.jpg</image>
+		<link>http://www.davidscottinteriors.com/</link>
+		<blurb>Entirely Flash-based site. All Actionscript &amp; HTML by me. Designed by Ricky Ferrer.</blurb>
+	</project>
+	<project>
+		<category>Animation</category>
+		<title>Pasta Sauce for Cats</title>
+		<image>images/works/pastaSauce.jpg</image>
+		<link>http://youtu.be/XPNz_FB7rM8</link>
+		<blurb>I created everything here, lovingly dedicated to Squeegee. Made with Maya, Shake &amp; Photoshop.</blurb>
+	</project>
+</works>

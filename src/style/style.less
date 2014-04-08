@@ -1,0 +1,282 @@
+/**/
+/* style.less : BobbyRoe.com :: Feb 2012 */
+/**/
+@textColor: #E0E0E0;
+@headerTextColor: #606060;
+@projectTextColor: #909090;
+@linkBright: #13c9d0;
+
+.ArmataNormal (@fontSize: 1.2em) {
+	font-weight:normal; 
+	font-size:@fontSize; 
+	font-family: 'Armata', sans-serif;
+}
+body {	
+	font: 100% Arial, Helvetica, sans-serif; 
+	color:@textColor;
+	background: url(../images/bg1.jpg) no-repeat center top #202020;
+}
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#wrapper {
+	width: 994px;
+	margin: 15px auto 0;
+	padding: 0;
+}
+
+#nav { 
+	margin-bottom: 10px; 
+	height:20px;
+	ul {
+		padding: 0; 
+		margin:0;
+		list-style:none;
+	}
+	li {
+		margin:0 1.7em 0 0;
+		float:left;
+		a {
+			text-transform:uppercase;  
+			text-decoration: none;
+			letter-spacing:1px;
+			.ArmataNormal (0.85em);
+			color:#0099FF;
+			&:hover {
+				text-decoration:none;
+				color:#0F; 
+			}
+		}
+		&#home a { color:@linkBright; }
+	}
+}
+
+#header {
+	padding:50px 0 0 50px;
+	height: 250px;
+	background: url(../images/bg-head1.png) no-repeat right top #191919;
+	background-size:320px 300px;
+	h2 { 
+		margin: 0; 
+		.ArmataNormal (1.6em);
+		color:@headerTextColor; 
+		clear:both;
+	}
+	img#title { margin:60px 0 0 400px; } /* Bobby Roe image */
+}
+
+#content {
+	width: 660px;
+	padding:0 0 0 10px;
+	float: left;
+	.project { 
+		margin:20px 0 20px; 
+		 h4 {
+			padding:3px; 
+			.ArmataNormal (0.8em);  
+			display:inline;
+			color:#808080;
+			background-color: #000;
+		}
+		h2 { 
+			margin:10px 0 0 0;
+			.ArmataNormal (1.2em);
+			color:#B0B0B0; 
+		}
+		p { 
+			margin: 5px 0 10px 0;
+			font-size:0.8em;
+			color: @projectTextColor;
+		}
+		img {
+			width:650px;
+			height:365px; 
+			border:none;
+		}
+	}
+	h2#head {
+		margin:10px 0 0px 0;
+		.ArmataNormal (1.4em); 
+		color:#505050;
+	}
+}
+
+#sidebar {
+	width: 310px;
+	padding: 0;
+	float: right;
+	h2 {
+		margin:10px 0 30px 0;
+		.ArmataNormal (1.6em);
+		color:@headerTextColor; 
+	}
+}
+
+#about {
+	padding:0 10px;
+	margin: 0;
+	height:150px;
+	clear: both; /* no floating elements on either side of me, thanks */
+	background: url(../images/BobbyHead2.png) no-repeat 20px top;
+	h2 {
+		margin: 20px 0 0 120px;
+		.ArmataNormal (1.6em); 
+		color:@headerTextColor; 
+	}
+	p {
+		margin: 10px 0 10px 120px;
+		font-size:0.9em;
+		color:#B0B0B0; 
+		&#foot {
+			padding:3px; 
+			.ArmataNormal (0.85em);
+			float:right;
+			display:inline;
+			color:#808080; 
+			background-color: #000;
+		}
+	}
+}
+
+#footer {
+	text-align:right;
+	margin: 0;
+	color:#808080;
+	clear: both;
+}
+#nav, #footer, #about { padding: 10px; }
+
+strong { 
+	text-transform:uppercase; 
+	letter-spacing:1px; 
+	.ArmataNormal (0.85em); 
+	color:@textColor;
+}
+
+#jstwitter { /* jQuery Tweets */
+	padding: 0 10px;
+	overflow: hidden;
+	font-size: 0.8em;
+	color: #B0B0B0;
+	.tweet {
+		padding: 0 0 15px 0;
+		margin: 0 auto 15px auto;
+		a {
+			text-decoration: none;
+			color: @linkBright;
+		}
+	}
+	.tweetAlt {
+		padding: 0 0 15px 0;
+		margin: 0 auto 15px auto;
+		color: @textColor;
+		a {
+			text-decoration: none;
+			color: #09F;
+			&:hover { text-decoration: underline; }
+		}
+	}
+	.time {
+		font-style: italic;
+		font-size: 10px;
+		color: #666666;
+	}
+} /* /end jQuery Tweets */
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* less than 1024px: iPad Portrait!!! */
+@media screen and (max-width: 1023px) {
+	
+	#wrapper {
+		width: 738px;
+	}
+	#header { 
+		padding:50px 0 0 0; 
+		background: url(../images/bg-head1.png) no-repeat 500px top #191919; 
+		img#title { margin:30px 0 0 280px; } /* Bobby Roe image */
+		h2 {
+			margin:0 0 0 20px;
+			font-size:1.5em;
+		}
+	}
+	#content { 
+		width: 465px; 
+		.project img { 
+			width:465px; 
+			height:262px;
+		}
+	}
+	#sidebar { width: 250px; }
+}
+
+/* less than 768px  iPhone Landscape!!! */
+@media screen and (max-width: 767px) {
+
+	#wrapper { width: 450px; }
+
+	#header { 
+		padding:20px 0 0 0;
+		background: url(../images/bg-head1.png) no-repeat 275px top  #191919;
+
+		img#title { margin:15px 0 0 95px; } /* Bobby Roe image */
+		h2 { 
+			width:250px; 
+			margin:0 0 0 20px;
+		}
+	}
+	#content {
+		width: auto;
+		float: none;
+		.project img { 
+			width:435px; 
+			height:245px;
+ 			p { font-size:0.7em }
+ 		}
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+}
+
+/* less than 480px  iPhone Portrait!!! */
+@media screen and (max-width: 479px) {
+	#wrapper { width: 290px; }
+	
+	#header {
+		padding:20px 0 0 10px; 
+		height:210px; 
+		background:url(../images/bg-head1.png) no-repeat 150px 75px  #191919; 
+		h2 {
+			margin:0 0 0 15px; 
+			font-size:1.3em
+		}
+		img#title { /* Bobby Roe image */
+			width:150px;
+			margin:0px 0 0 8px;
+			height:105px;
+		}
+	}
+	#content {
+		width: auto;
+		float: none;
+		.project img { 
+			width:280px; 
+			height:157px;
+			p { font-size:1em }
+		}
+	}
+	#sidebar { display: none; }
+	#nav li { 
+		margin:0 0.9em 0 0;
+		a {
+			letter-spacing:1px;
+			font-size:0.8em;
+		}
+	}
+}
+
+
