@@ -2,7 +2,7 @@
 /* style.less : BobbyRoe.com :: Feb 2012 */
 /**/
 @textColor: #E0E0E0;
-@headerTextColor: #606060;
+@headerTextColor: #707070;
 @projectTextColor: #909090;
 @linkBright: #13c9d0;
 
@@ -93,12 +93,18 @@ STRUCTURE
 			width:650px;
 			height:365px; 
 			border:none;
+
+		    // -webkit-filter: grayscale(1);
+		    // &:hover {
+		    // 	-webkit-filter: none;
+		    // }
+
 		}
 	}
 	h2#head {
 		margin:10px 0 0px 0;
 		.ArmataNormal (1.4em); 
-		color:#505050;
+		color:@headerTextColor;
 	}
 }
 

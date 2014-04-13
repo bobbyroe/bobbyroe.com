@@ -2,11 +2,12 @@
 <works>
 	<project>
 		<category>Front End Software</category>
-		<title>RicochetMedia.net</title>
-		<image>images/works/ricochet.jpg</image>
-		<link>http://ricochetmedia.net</link>
-		<blurb>I've developed the front end for a social media merketing platform for publishers &amp; advertisers.</blurb>
+		<title>Galaxy61.com</title>
+		<image>images/works/g61_2014.jpg</image>
+		<link>http://galaxy61.com</link>
+		<blurb>As a development team of one, I created Doug Johnson's new showcase website. Backbone.js, Underscore.js and jQuery provide the framework.</blurb>
 	</project>
+
 	<project>
 		<category>Graphics Programming</category>
 		<title>About WebGL</title>
@@ -21,6 +22,14 @@
 		<image>images/works/three.jpg</image>
 		<link>https://github.com/bobbyroe/Three-Experiments</link>
 		<blurb>Some art + code experiements with Three.js</blurb>
+	</project>
+
+	<project>
+		<category>Front End Software</category>
+		<title>RicochetMedia.net</title>
+		<image>images/works/ricochet.jpg</image>
+		<link>http://ricochetmedia.net</link>
+		<blurb>I've developed the front end for a social media merketing platform for publishers &amp; advertisers.</blurb>
 	</project>
 
 	<project>
@@ -41,15 +50,8 @@
 		<category>Flash Development</category>
 		<title>Galaxy 61</title>
 		<image>images/works/g61.jpg</image>
-		<link>http://www.galaxy61.com</link>
+		<link>http://galaxy61.com/HTML/splash.html</link>
 		<blurb>Doug Johnson designed &amp; I built this sweet flash site. Skills: Actionscript, Javascript, XHTML &amp; Flash.</blurb>
-	</project>
-	<project>
-		<category>WebGL Experiment</category>
-		<title>Most Popular Emoji</title>
-		<image>images/works/emoji.jpg</image>
-		<link>http://bobbyroe.com/other/3js/emoji/</link>
-		<blurb>Most used Emojis between me &amp; my wife, Eleanor for the month of July 2011. Built with Mr Doob's Three.js</blurb>
 	</project>
 	<project>
 		<category>Web Development</category>

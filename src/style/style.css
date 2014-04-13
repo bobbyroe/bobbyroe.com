@@ -56,7 +56,7 @@ STRUCTURE
   font-weight: normal;
   font-size: 1.6em;
   font-family: 'Armata', sans-serif;
-  color: #606060;
+  color: #707070;
   clear: both;
 }
 #header img#title {
@@ -101,7 +101,7 @@ STRUCTURE
   font-weight: normal;
   font-size: 1.4em;
   font-family: 'Armata', sans-serif;
-  color: #505050;
+  color: #707070;
 }
 #sidebar {
   width: 310px;
@@ -113,7 +113,7 @@ STRUCTURE
   font-weight: normal;
   font-size: 1.6em;
   font-family: 'Armata', sans-serif;
-  color: #606060;
+  color: #707070;
 }
 #about {
   padding: 0 10px;
@@ -129,7 +129,7 @@ STRUCTURE
   font-weight: normal;
   font-size: 1.6em;
   font-family: 'Armata', sans-serif;
-  color: #606060;
+  color: #707070;
 }
 #about p {
   margin: 10px 0 10px 120px;
