@@ -54,11 +54,11 @@
 		<blurb>Doug Johnson designed &amp; I built this sweet flash site. Skills: Actionscript, Javascript, XHTML &amp; Flash.</blurb>
 	</project>
 	<project>
-		<category>Web Development</category>
-		<title>Grant Delin Photographer</title>
-		<image>images/works/gdelin.jpg</image>
-		<link>http://www.gdelin.com</link>
-		<blurb>Showcase for the stunning work of Photographer Grant Delin. Actionscript, JS, XML &amp; HTML. Designed by Martin Iselt.</blurb>
+		<category>Development Showcase</category>
+		<title>Github.com/bobbyroe</title>
+		<image>images/works/github.jpg</image>
+		<link>http://github.com/bobbyroe</link>
+		<blurb>A collection of my development work and play for the past 3 years.</blurb>
 	</project>
 	<project>
 		<category>Flash Programming</category>
@@ -73,13 +73,6 @@
 		<image>images/works/NYTMostPop.jpg</image>
 		<link>http://bobbyroe.com/nyt/viz/?test</link>
 		<blurb>This web app pulls a feed from NYTimes.com search API and parses the most popular topics. Built with Three.js &amp; jQuery.</blurb>
-	</project>
-	<project>
-		<category>Flash Development</category>
-		<title>David Scott Interiors</title>
-		<image>images/works/dsi.jpg</image>
-		<link>http://www.davidscottinteriors.com/</link>
-		<blurb>Entirely Flash-based site. All Actionscript &amp; HTML by me. Designed by Ricky Ferrer.</blurb>
 	</project>
 	<project>
 		<category>Animation</category>
