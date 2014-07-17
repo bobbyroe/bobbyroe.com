@@ -6,7 +6,7 @@ getProjectsJSON = ->
         dataType: "json"
         success: parseJSON
 
-parseXml = (data) ->
+parseJSON = (data) ->
     console.log data
     #$(data).find("project").each (i, item) ->
         #links.push $(this).find("link").text()
