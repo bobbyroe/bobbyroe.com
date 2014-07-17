@@ -2,10 +2,10 @@
 <works>
 	<project>
 		<category>Front End Software</category>
-		<title>Galaxy61.com</title>
-		<image>images/works/g61_2014.jpg</image>
-		<link>http://galaxy61.com</link>
-		<blurb>As a development team of one, I created Doug Johnson's new showcase website. Backbone.js, Underscore.js and jQuery provide the framework.</blurb>
+		<title>RicochetMedia.net</title>
+		<image>images/works/ricochet.jpg</image>
+		<link>https://www.facebook.com/ricochetmedia.net</link>
+		<blurb>I lead the team that developed the front end for a B-to-B social media marketing platform for publishers and advertisers.</blurb>
 	</project>
 
 	<project>
@@ -26,10 +26,10 @@
 
 	<project>
 		<category>Front End Software</category>
-		<title>RicochetMedia.net</title>
-		<image>images/works/ricochet.jpg</image>
-		<link>http://ricochetmedia.net</link>
-		<blurb>I've developed the front end for a social media merketing platform for publishers &amp; advertisers.</blurb>
+		<title>Galaxy61.com</title>
+		<image>images/works/g61_2014.jpg</image>
+		<link>http://galaxy61.com</link>
+		<blurb>This is a freelance showcase website for a Brooklyn-based animation production studio. Dynamic and resposive design. Backbone.js, Underscore.js and jQuery provide the framework.</blurb>
 	</project>
 
 	<project>
@@ -47,13 +47,6 @@
 		<blurb>My Visual Effects Reel, including personal &amp; commercial works from the past 5 years. Software skills include Maya, After Effects, Real Flow &amp; Boujou.</blurb>
 	</project>
 	<project>
-		<category>Flash Development</category>
-		<title>Galaxy 61</title>
-		<image>images/works/g61.jpg</image>
-		<link>http://galaxy61.com/HTML/splash.html</link>
-		<blurb>Doug Johnson designed &amp; I built this sweet flash site. Skills: Actionscript, Javascript, XHTML &amp; Flash.</blurb>
-	</project>
-	<project>
 		<category>Development Showcase</category>
 		<title>Github.com/bobbyroe</title>
 		<image>images/works/github.jpg</image>
@@ -62,14 +55,14 @@
 	</project>
 	<project>
 		<category>Flash Programming</category>
-		<title>NYT Marketing Content Cloud</title>
+		<title>NYT Content Cloud</title>
 		<image>images/works/contentCloud.jpg</image>
 		<link>http://www.nytimes.com/2011/04/20/arts/design/wildenstein-art-gallery-is-beset-by-lawsuits.html?c0ntentCl0ud</link>
 		<blurb>A production-ready prototype built for The NYTimes.com marketing team. A fun way to explore content in an enormous ad unit (896px x 648px). I did all the AS/Flash work. Designed by Brandon Melchior.</blurb>
 	</project>
 	<project>
 		<category>WebGL Experiment</category>
-		<title>NYTimes.com Most Popular Topics</title>
+		<title>NYT's Most Popular Topics</title>
 		<image>images/works/NYTMostPop.jpg</image>
 		<link>http://bobbyroe.com/nyt/viz/?test</link>
 		<blurb>This web app pulls a feed from NYTimes.com search API and parses the most popular topics. Built with Three.js &amp; jQuery.</blurb>

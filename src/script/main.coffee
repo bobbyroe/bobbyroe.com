@@ -1,5 +1,5 @@
+links = []
 getWorksXML = ->
-
     $.ajax
         type: "GET"
         url: "works.xml"
@@ -7,20 +7,19 @@ getWorksXML = ->
         success: parseXml
 
 parseXml = (data) ->
-
-    $(data).find("project").each ->
+    $(data).find("project").each (i, item) ->
+        links.push $(this).find("link").text()
         pCat = "<h4>#{$(this).find("category").text()}</h4>"
         pTitle = "<h2>#{$(this).find("title").text()}</h2>"
-        pImage = "<img src='#{$(this).find("image").text()}'/>"
+        # pImage = "<img src='#{$(this).find("image").text()}'/>"
         pBlurb = "<p>#{$(this).find("blurb").text()}</p>"
-        pLink = "<a href='#{$(this).find("link").text()}' target='_blank'>"
+        # pLink = "<a href='#{$(this).find("link").text()}' target='_blank'>"
 
-        projectHtml = "<div class='project'> #{pCat} #{pTitle} #{pBlurb} #{pLink} #{pImage}</a></div>"
+        projectHtml = "<div class='project' id='#{i}'> #{pTitle} #{pCat} #{pBlurb}</div>"
         $("#content").append projectHtml
 
 randomizeAboutPic = ->
-
-    random_number = Math.floor(Math.random() * 5)
+    random_number = Math.floor(Math.random() * 3) + 2
     $("#about").css('background-image', "url(images/BobbyHead#{random_number}.png)")
 
 randomizeHeaderPic = ->
@@ -40,7 +39,22 @@ init = ->
     setTimeout (-> window.scrollTo(0, 1); return), 100
     getWorksXML()
     randomizeAboutPic()
-    randomizeHeaderPic()
+    # randomizeHeaderPic()
     randomizeAboutQuote()
 
+onMouseOver = (evt) ->
+    if evt.target.classList.contains 'project'
+        evt.target.classList.add 'hot'
+
+onMouseOut = (evt) ->
+    if evt.target.classList.contains 'project'
+        evt.target.classList.remove 'hot'
+
+onClick = (evt) ->
+    if evt.target.classList.contains 'project'
+        window.location = links[+evt.target.id]
+
 $(document).ready init()
+document.body.addEventListener 'mouseover', onMouseOver
+document.body.addEventListener 'mouseout', onMouseOut
+document.body.addEventListener 'click', onClick
