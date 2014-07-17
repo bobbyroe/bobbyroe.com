@@ -44,7 +44,7 @@
 		<title>CG Effects Reel</title>
 		<image>images/works/reel.jpg</image>
 		<link>http://vimeo.com/15575038</link>
-		<blurb>My Visual Effects Reel, including personal &amp; commercial works from the past 5 years. Software skills include Maya, After Effects, Real Flow &amp; Boujou.</blurb>
+		<blurb>My Visual Effects Reel, including personal and commercial works from the past 5 years. Software skills include Maya, After Effects, Real Flow and Boujou.</blurb>
 	</project>
 	<project>
 		<category>Development Showcase</category>
@@ -62,16 +62,16 @@
 	</project>
 	<project>
 		<category>WebGL Experiment</category>
-		<title>NYT's Most Popular Topics</title>
+		<title>NYT's Most Popular</title>
 		<image>images/works/NYTMostPop.jpg</image>
 		<link>http://bobbyroe.com/nyt/viz/?test</link>
-		<blurb>This web app pulls a feed from NYTimes.com search API and parses the most popular topics. Built with Three.js &amp; jQuery.</blurb>
+		<blurb>This web app uses data from NYTimes.com search API to display the most popular topics. Built with Three.js and jQuery.</blurb>
 	</project>
 	<project>
 		<category>Animation</category>
 		<title>Pasta Sauce for Cats</title>
 		<image>images/works/pastaSauce.jpg</image>
 		<link>http://youtu.be/XPNz_FB7rM8</link>
-		<blurb>I created everything here, lovingly dedicated to Squeegee. Made with Maya, Shake &amp; Photoshop.</blurb>
+		<blurb>I created everything here story, sound effects, and all visuals with Maya, Shake and Photoshop.</blurb>
 	</project>
 </works>
