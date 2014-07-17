@@ -1,22 +1,23 @@
 links = []
-getWorksXML = ->
+getProjectsJSON = ->
     $.ajax
         type: "GET"
-        url: "works.xml"
-        dataType: "xml"
-        success: parseXml
+        url: "projects.json"
+        dataType: "json"
+        success: parseJSON
 
 parseXml = (data) ->
-    $(data).find("project").each (i, item) ->
-        links.push $(this).find("link").text()
-        pCat = "<h4>#{$(this).find("category").text()}</h4>"
-        pTitle = "<h2>#{$(this).find("title").text()}</h2>"
+    console.log data
+    #$(data).find("project").each (i, item) ->
+        #links.push $(this).find("link").text()
+        #pCat = "<h4>#{$(this).find("category").text()}</h4>"
+        #pTitle = "<h2>#{$(this).find("title").text()}</h2>"
         # pImage = "<img src='#{$(this).find("image").text()}'/>"
-        pBlurb = "<p>#{$(this).find("blurb").text()}</p>"
+        #pBlurb = "<p>#{$(this).find("blurb").text()}</p>"
         # pLink = "<a href='#{$(this).find("link").text()}' target='_blank'>"
-
-        projectHtml = "<div class='project' id='#{i}'> #{pTitle} #{pCat} #{pBlurb}</div>"
-        $("#content").append projectHtml
+#
+        #projectHtml = "<div class='project' id='#{i}'> #{pTitle} #{pCat} #{pBlurb}</div>"
+        #$("#content").append projectHtml
 
 randomizeAboutPic = ->
     random_number = Math.floor(Math.random() * 3) + 2
