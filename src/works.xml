@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <works>
 	<project>
-		<category>Front End Software</category>
+		<category>Front End Development</category>
 		<title>RicochetMedia.net</title>
 		<image>images/works/ricochet.jpg</image>
 		<link>https://www.facebook.com/ricochetmedia.net</link>
-		<blurb>I lead the team that developed the front end for a B-to-B social media marketing platform for publishers and advertisers.</blurb>
+		<blurb>At NYTimes.com's R&D Ventures, I lead the front-end development team on a product called Ricochet, a B2B social media marketing platform for publishers and advertisers.</blurb>
 	</project>
 
 	<project>
@@ -13,7 +13,7 @@
 		<title>About WebGL</title>
 		<image>images/works/bunny.jpg</image>
 		<link>http://bobbyroe.com/wgl/about/</link>
-		<blurb>An introduction to WebGL (without libraries!) see the &lt;a href='https://vimeo.com/69136718' target='_blank'&gt;video&lt;/a&gt;</blurb>
+		<blurb>Here is an introductory presentation I gave on WebGL (without using any libraries!) see the &lt;a href='https://vimeo.com/69136718' target='_blank'&gt;video&lt;/a&gt;</blurb>
 	</project>
 
 	<project>
@@ -25,11 +25,11 @@
 	</project>
 
 	<project>
-		<category>Front End Software</category>
+		<category>Front End Development</category>
 		<title>Galaxy61.com</title>
 		<image>images/works/g61_2014.jpg</image>
 		<link>http://galaxy61.com</link>
-		<blurb>This is a freelance showcase website for a Brooklyn-based animation production studio. Dynamic and resposive design. Backbone.js, Underscore.js and jQuery provide the framework.</blurb>
+		<blurb>This is a freelance project for a Brooklyn-based animation production studio. Dynamic and resposive design. Backbone.js, Underscore.js and jQuery provide the framework.</blurb>
 	</project>
 
 	<project>
@@ -37,14 +37,14 @@
 		<title>TapSynth</title>
 		<image>images/works/tapsynth.jpg</image>
 		<link>http://tapsynth.com</link>
-		<blurb>I built an iOS app! From concept to App store in 2 months. TapSynth puts an exclamation mark on a year and a half of Objective-C study. Site design by Danielle Primiceri.</blurb>
+		<blurb> I built an iOS App from concept to App store in 2 months. TapSynth puts an exclamation mark on a year and a half of Objective-C study. Site design by Danielle Primiceri.</blurb>
 	</project>
 	<project>
 		<category>Visual Effects</category>
 		<title>CG Effects Reel</title>
 		<image>images/works/reel.jpg</image>
 		<link>http://vimeo.com/15575038</link>
-		<blurb>My Visual Effects Reel, including personal and commercial works from the past 5 years. Software skills include Maya, After Effects, Real Flow and Boujou.</blurb>
+		<blurb>My visual effects reel, including personal and commercial works from the past 8 years. Software skills include Maya, After Effects and Real Flow.</blurb>
 	</project>
 	<project>
 		<category>Development Showcase</category>
@@ -72,6 +72,6 @@
 		<title>Pasta Sauce for Cats</title>
 		<image>images/works/pastaSauce.jpg</image>
 		<link>http://youtu.be/XPNz_FB7rM8</link>
-		<blurb>I created everything here story, sound effects, and all visuals with Maya, Shake and Photoshop.</blurb>
+		<blurb>I wrote, designed and animated this piece. Lovingly dedicated to Squeegee. Made with Maya, Shake & Photoshop.</blurb>
 	</project>
 </works>
