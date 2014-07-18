@@ -1,0 +1,145 @@
+{
+	"projects": [{
+		"category": "Front End Development",
+		"title": "Undo / Redo prototype",
+		"link": "http://bobbyroe.com/github/Undo-Redo-Prototype/",
+		"keywords": "UX, prototype",
+		"blurb": "A vanilla-javascript (no libraries) example of basic workspace undo and redo actions, written with Coffeescript and SASS"
+	},
+
+	{
+		"category": "Data Visualization",
+		"title": "USA Unemployment Map",
+		"link": "http://bobbyroe.com/github/USA-Unemployment/",
+		"keywords": "data_viz",
+		"blurb": "An example of D3.js' mapping ability, showing 2008 data. More at bl.ocks.org/mbostock/4060606"
+	},
+
+	{
+		"category": "Data Visualization",
+		"title": "Snack Nutrition Graph",
+		"link": "http://bobbyroe.com/github/Snacking-Graph/",
+		"keywords": "data_viz",
+		"blurb": "A fun graph of nutrition information for the snacks at my office. It's sortable, click the boxes in the key."
+	},
+
+	{
+		"category": "WebGL",
+		"title": "Quad Tree Visualization",
+		"link": "http://bobbyroe.com/github/Quad-Tree/",
+		"keywords": "data_viz",
+		"blurb": "Exploring an optimisation system for a bunch of moving things (particles)"
+	},
+
+	{
+		"category": "Data Visualization",
+		"title": "Popularity of Javascript Frameworks",
+		"link": "http://bobbyroe.com/github/Popular-JS-Frameworks/",
+		"keywords": "data_viz",
+		"blurb": "Wondering which Javascript framework is the most talked about on Stack Overflow? Data from May 2014"
+	},
+
+	{
+		"category": "Front End Development",
+		"title": "RicochetMedia.net",
+		"link": "https://www.facebook.com/ricochetmedia.net",
+		"keywords": "UX, backbone, LESS, lead",
+		"blurb": "At NYTimes.com's R&amp;D Ventures, I lead the front-end development team on a product called Ricochet, a B2B social media marketing platform for publishers and advertisers."
+	},
+
+	{
+		"category": "WebGL",
+		"title": "About WebGL",
+		"link": "http://bobbyroe.com/wgl/about/",
+		"keywords": "webgl, presentation",
+		"blurb": "Here is an introductory presentation I gave on WebGL (without using any libraries!) see the video at vimeo.com/69136718"
+	},
+
+	{
+		"category": "THREE.js experiment",
+		"title": "Tunnels",
+		"link": "http://bobbyroe.com/three/tunnels/",
+		"keywords": "THREE.js, experiment",
+		"blurb": "An art + code experiement with generated geometry, point lights and a flying camera"
+	},
+
+	{
+		"category": "THREE.js experiment",
+		"title": "Wireframe Globe",
+		"link": "http://bobbyroe.com/three/vector_earth/",
+		"keywords": "THREE.js, experiement",
+		"blurb": "Another experiement, this one an homage to the graphics of 'War Games' ca. 1984"
+	},
+
+	{
+		"category": "THREE.js experiment",
+		"title": "A Golden Head",
+		"link": "http://bobbyroe.com/three/head/",
+		"keywords": "THREE.js, experiement",
+		"blurb": "Environment reflections and bump maps help sell this head model as gold"
+	},
+
+	{
+		"category": "THREE.js experiment",
+		"title": "Autodrawing Angular Lines",
+		"link": "http://bobbyroe.com/three/angular_trails/",
+		"keywords": "THREE.js, experiment",
+		"blurb": "A fun art + code experiement"
+	},
+
+	{
+		"category": "Front End Development",
+		"title": "Galaxy61.com",
+		"link": "http://galaxy61.com",
+		"keywords": "UX, backbone, LESS, lead",
+		"blurb": "This is a freelance project for a Brooklyn-based animation production studio. Dynamic and resposive design. Backbone.js, Underscore.js and jQuery provide the framework."
+	},
+
+	{
+		"category": "Front End Development",
+		"title": "Introduction to Backbone.js",
+		"link": "http://bobbyroe.com/mm",
+		"keywords": "backbone, presentation",
+		"blurb": "A presentation at UPenn; showing off the poer of Backbone.js"
+	},
+
+	{
+		"category": "iOS Development",
+		"title": "TapSynth",
+		"link": "http://tapsynth.com",
+		"keywords": "mobile",
+		"blurb": " I built an iOS App from concept to App store in 2 months. TapSynth puts an exclamation mark on a year and a half of Objective-C study. Site design by Danielle Primiceri."
+	},
+
+	{
+		"category": "Visual Effects",
+		"title": "CG Effects Reel",
+		"link": "http://vimeo.com/15575038",
+		"keywords": "3D",
+		"blurb": "My visual effects reel, including personal and commercial works from the past 8 years. Software skills include Maya, After Effects and Real Flow."
+	},
+
+	{
+		"category": "Flash Programming",
+		"title": "NYT Content Cloud",
+		"link": "http://www.nytimes.com/2011/04/20/arts/design/wildenstein-art-gallery-is-beset-by-lawsuits.html?c0ntentCl0ud",
+		"keywords": "3D, flash",
+		"blurb": "A production-ready prototype built for The NYTimes.com marketing team. A fun way to explore content in an enormous ad unit (896px x 648px). I did all the AS/Flash work. Designed by Brandon Melchior."
+	},
+
+	{
+		"category": "THREE.js experiment",
+		"title": "NYT's Most Popular",
+		"link": "http://bobbyroe.com/nyt/viz/?test",
+		"keywords": "THREE.js, experiment",
+		"blurb": "This web app uses data from NYTimes.com search API to display the most popular topics. Built with Three.js and jQuery."
+	},
+
+	{
+		"category": "Animation",
+		"title": "Pasta Sauce for Cats",
+		"link": "http://youtu.be/XPNz_FB7rM8",
+		"keywords": "3D",
+		"blurb": "I wrote, designed and animated this piece. Lovingly dedicated to Squeegee. Made with Maya, Shake &amp; Photoshop."
+	}]
+}

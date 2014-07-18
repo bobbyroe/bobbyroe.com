@@ -7,17 +7,17 @@ getProjectsJSON = ->
         success: parseJSON
 
 parseJSON = (data) ->
-    console.log data
-    #$(data).find("project").each (i, item) ->
-        #links.push $(this).find("link").text()
-        #pCat = "<h4>#{$(this).find("category").text()}</h4>"
-        #pTitle = "<h2>#{$(this).find("title").text()}</h2>"
-        # pImage = "<img src='#{$(this).find("image").text()}'/>"
-        #pBlurb = "<p>#{$(this).find("blurb").text()}</p>"
-        # pLink = "<a href='#{$(this).find("link").text()}' target='_blank'>"
-#
-        #projectHtml = "<div class='project' id='#{i}'> #{pTitle} #{pCat} #{pBlurb}</div>"
-        #$("#content").append projectHtml
+    for item, i in data.projects
+        # console.log item, i
+        links.push item.link
+        pCat = "<h4>#{item.category}</h4>"
+        pTitle = "<h2>#{item.title}</h2>"
+        pImage = "<img src='#{item.image}'/>"
+        pBlurb = "<p>#{item.blurb}</p>"
+        pLink = "<a href='#{item.link}' target='_blank'>"
+
+        projectHtml = "<div class='project' id='#{i}'> #{pTitle} #{pCat} #{pBlurb}</div>"
+        $("#content").append projectHtml
 
 randomizeAboutPic = ->
     random_number = Math.floor(Math.random() * 3) + 2
@@ -38,7 +38,7 @@ randomizeAboutQuote = ->
 
 init = ->
     setTimeout (-> window.scrollTo(0, 1); return), 100
-    getWorksXML()
+    getProjectsJSON()
     randomizeAboutPic()
     # randomizeHeaderPic()
     randomizeAboutQuote()
