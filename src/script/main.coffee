@@ -39,9 +39,9 @@ randomizeAboutQuote = ->
 init = ->
     setTimeout (-> window.scrollTo(0, 1); return), 100
     getProjectsJSON()
-    randomizeAboutPic()
+    # randomizeAboutPic()
     # randomizeHeaderPic()
-    randomizeAboutQuote()
+    # randomizeAboutQuote()
 
 onMouseOver = (evt) ->
     if evt.target.classList.contains 'project'

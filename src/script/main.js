@@ -53,9 +53,7 @@ init = function() {
   setTimeout((function() {
     window.scrollTo(0, 1);
   }), 100);
-  getProjectsJSON();
-  randomizeAboutPic();
-  return randomizeAboutQuote();
+  return getProjectsJSON();
 };
 
 onMouseOver = function(evt) {
