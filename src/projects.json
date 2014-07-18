@@ -40,14 +40,6 @@
 	},
 
 	{
-		"category": "Front End Development",
-		"title": "RicochetMedia.net",
-		"link": "https://www.facebook.com/ricochetmedia.net",
-		"keywords": "UX, backbone, LESS, lead",
-		"blurb": "At NYTimes.com's R&amp;D Ventures, I lead the front-end development team on a product called Ricochet, a B2B social media marketing platform for publishers and advertisers."
-	},
-
-	{
 		"category": "WebGL",
 		"title": "About WebGL",
 		"link": "http://bobbyroe.com/wgl/about/",
@@ -94,13 +86,13 @@
 		"keywords": "UX, backbone, LESS, lead",
 		"blurb": "This is a freelance project for a Brooklyn-based animation production studio. Dynamic and resposive design. Backbone.js, Underscore.js and jQuery provide the framework."
 	},
-
+	
 	{
 		"category": "Front End Development",
-		"title": "Introduction to Backbone.js",
-		"link": "http://bobbyroe.com/mm",
-		"keywords": "backbone, presentation",
-		"blurb": "A presentation at UPenn; showing off the poer of Backbone.js"
+		"title": "RicochetMedia.net",
+		"link": "https://www.facebook.com/ricochetmedia.net",
+		"keywords": "UX, backbone, LESS, lead",
+		"blurb": "At NYTimes.com's R&amp;D Ventures, I lead the front-end development team on a product called Ricochet, a B2B social media marketing platform for publishers and advertisers."
 	},
 
 	{
@@ -112,19 +104,11 @@
 	},
 
 	{
-		"category": "Visual Effects",
-		"title": "CG Effects Reel",
-		"link": "http://vimeo.com/15575038",
-		"keywords": "3D",
-		"blurb": "My visual effects reel, including personal and commercial works from the past 8 years. Software skills include Maya, After Effects and Real Flow."
-	},
-
-	{
-		"category": "Flash Programming",
-		"title": "NYT Content Cloud",
-		"link": "http://www.nytimes.com/2011/04/20/arts/design/wildenstein-art-gallery-is-beset-by-lawsuits.html?c0ntentCl0ud",
-		"keywords": "3D, flash",
-		"blurb": "A production-ready prototype built for The NYTimes.com marketing team. A fun way to explore content in an enormous ad unit (896px x 648px). I did all the AS/Flash work. Designed by Brandon Melchior."
+		"category": "Front End Development",
+		"title": "Introduction to Backbone.js",
+		"link": "http://www.slideshare.net/bobbyroe/backbonejs-an-introduction-14284042",
+		"keywords": "backbone, presentation",
+		"blurb": "A presentation at UPenn; showing off the power of Backbone.js"
 	},
 
 	{
@@ -133,6 +117,14 @@
 		"link": "http://bobbyroe.com/nyt/viz/?test",
 		"keywords": "THREE.js, experiment",
 		"blurb": "This web app uses data from NYTimes.com search API to display the most popular topics. Built with Three.js and jQuery."
+	},
+	
+	{
+		"category": "Visual Effects",
+		"title": "CG Effects Reel",
+		"link": "http://vimeo.com/15575038",
+		"keywords": "3D",
+		"blurb": "My visual effects reel, including personal and commercial works from the past 8 years. Software skills include Maya, After Effects and Real Flow."
 	},
 
 	{
