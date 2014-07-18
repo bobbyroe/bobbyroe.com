@@ -12,7 +12,7 @@
 		"title": "USA Unemployment Map",
 		"link": "http://bobbyroe.com/github/USA-Unemployment/",
 		"keywords": "data_viz",
-		"blurb": "An example of D3.js' mapping ability, showing 2008 data. More at bl.ocks.org/mbostock/4060606"
+		"blurb": "An example of D3.js' mapping and animation with data from 2008. More at bl.ocks.org/mbostock/4060606"
 	},
 
 	{
@@ -20,7 +20,7 @@
 		"title": "Snack Nutrition Graph",
 		"link": "http://bobbyroe.com/github/Snacking-Graph/",
 		"keywords": "data_viz",
-		"blurb": "A fun graph of nutrition information for the snacks at my office. It's sortable, click the boxes in the key."
+		"blurb": "A fun graph of nutrition information for the snacks at my office. It's sortable, click the boxes in the key at the bottom."
 	},
 
 	{
@@ -28,7 +28,7 @@
 		"title": "Quad Tree Visualization",
 		"link": "http://bobbyroe.com/github/Quad-Tree/",
 		"keywords": "data_viz",
-		"blurb": "Exploring an optimisation system for a bunch of moving things (particles)"
+		"blurb": "An experiment with an optimisation system for a bunch of moving things (particles)"
 	},
 
 	{
