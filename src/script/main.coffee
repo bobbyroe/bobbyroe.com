@@ -1,15 +1,22 @@
+d = document
 links = []
+stuff = []
+random_stuff_index = -1
+first_thing_index = -1
+current_thing = null
+stuff_el = d.querySelector '#stuff'
+
 getProjectsJSON = ->
     $.ajax
         type: "GET"
         url: "projects.json"
         dataType: "json"
-        success: parseJSON
+        success: init
 
 parseJSON = (data) ->
     for item, i in data.projects
-        # console.log item, i
         links.push item.link
+        stuff.push  name: item.stuff, left: -1, width: -1
         pCat = "<h4>#{item.category}</h4>"
         pTitle = "<h2>#{item.title}</h2>"
         pImage = "<img src='#{item.image}'/>"
@@ -19,29 +26,47 @@ parseJSON = (data) ->
         projectHtml = "<div class='project' id='#{i}'> #{pTitle} #{pCat} #{pBlurb}</div>"
         $("#content").append projectHtml
 
-randomizeAboutPic = ->
-    random_number = Math.floor(Math.random() * 3) + 2
-    $("#about").css('background-image', "url(images/BobbyHead#{random_number}.png)")
+randomizeILikeStuff = ->
+    box = null
+    stuff_el.innerHTML = ''
+    for thing, i in stuff when thing.name isnt ''
+        thing_el = d.createElement 'a'
+        thing_el.className = 'thing'
+        thing_el.innerHTML = thing.name.replace /\s/g, '&nbsp;'
+        stuff_el.appendChild thing_el
+        box = thing_el.getBoundingClientRect()
+        thing.left = box.left
+        thing.width = box.width
+        if first_thing_index is -1 then first_thing_index = i
 
-randomizeHeaderPic = ->
-    random_number = Math.floor(Math.random() * 5)
-    $("#header").css('background-image', "url(images/bg-head#{random_number}.png)")
+    random_stuff_index = Math.floor(Math.random() * stuff.length)
+    current_thing = stuff[random_stuff_index]
+    stuff_el.setAttribute 'style', "width: #{first_thing_index.width}px"
 
-randomizeAboutQuote = ->
-    quotes = ["He also enjoys Aikido, Jaco Pastorius & trips to Iceland.",
-              "He also enjoys biking, Igor Stravinsky & travel to Thailand.",
-              "He also enjoys bass guitar, kale salads & exploring Bermuda.",
-              "He also enjoys jazz harmonies, mojitos & trips to Hawaii.",
-              "He also enjoys Paul Klee, Matrix Math & touring the Czech Republic."]
-    random_number = Math.floor(Math.random() * 5)
-    $(".quote").text(quotes[random_number])
+scrollILike = ->
 
-init = ->
-    setTimeout (-> window.scrollTo(0, 1); return), 100
-    getProjectsJSON()
-    # randomizeAboutPic()
-    # randomizeHeaderPic()
-    # randomizeAboutQuote()
+    console.log current_thing
+
+    if current_thing.name isnt ''
+        stuff_el.setAttribute 'style', "width: #{current_thing.width}px"
+        stuff_el.goalScrollLeft = current_thing.left - stuff[first_thing_index].left
+        stuff_el.cur_scroll_left = stuff_el.scrollLeft
+        likesAnimLoop()
+
+likesAnimLoop = ->
+    if Math.abs(stuff_el.scrollLeft - stuff_el.goalScrollLeft) < 1.1
+        stuff_el.scrollLeft = stuff_el.goalScrollLeft 
+    else
+        stuff_el.cur_scroll_left -= (stuff_el.cur_scroll_left - stuff_el.goalScrollLeft) * 0.08
+        stuff_el.scrollLeft = stuff_el.cur_scroll_left
+        requestAnimationFrame likesAnimLoop
+
+init = (data) ->
+    parseJSON data
+    randomizeILikeStuff()
+    setTimeout (-> window.scrollTo(0, 1)), 100
+
+    setTimeout (-> scrollILike()), 1000
 
 onMouseOver = (evt) ->
     if evt.target.classList.contains 'project'
@@ -55,7 +80,9 @@ onClick = (evt) ->
     if evt.target.classList.contains 'project'
         window.location = links[+evt.target.id]
 
-$(document).ready init()
-document.body.addEventListener 'mouseover', onMouseOver
-document.body.addEventListener 'mouseout', onMouseOut
-document.body.addEventListener 'click', onClick
+    if evt.target.id is 'stuff' then window.location = links[random_stuff_index]
+
+$(d).ready getProjectsJSON()
+d.body.addEventListener 'mouseover', onMouseOver
+d.body.addEventListener 'mouseout', onMouseOut
+d.body.addEventListener 'click', onClick

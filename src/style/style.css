@@ -79,6 +79,31 @@ a:hover {
   font-size: 1.2em;
   color: #909090;
 }
+#leader div {
+  position: relative;
+}
+#leader div #stuff {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  width: 62px;
+  overflow: hidden;
+}
+#leader div #stuff .thing {
+  background-color: #000000;
+  width: auto;
+}
+#leader div #stuff .thing.disabled {
+  color: #B0B0B0;
+  cursor: auto;
+}
+#leader div #stuff .thing.disabled:hover {
+  color: #B0B0B0;
+}
 #content {
   width: 100%;
   padding: 0 0 0 10px;
@@ -101,7 +126,7 @@ a:hover {
   font-weight: normal;
   font-size: 2.2em;
   font-family: 'Armata', sans-serif;
-  color: #00ccFF;
+  color: #00ccff;
 }
 #content .project h4 {
   pointer-events: none;
@@ -111,7 +136,7 @@ a:hover {
   font-family: 'Armata', sans-serif;
   display: inline-block;
   color: #808080;
-  background-color: #000;
+  background-color: #000000;
   margin: 0;
 }
 #content .project p {
@@ -135,7 +160,6 @@ a:hover {
   margin: 0;
   height: 150px;
   clear: both;
-  /* no floating elements on either side of me, thanks */
 }
 #about h2 {
   margin: 20px 0 0 120px;

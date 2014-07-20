@@ -1,10 +1,11 @@
 {
 	"projects": [{
 		"category": "Front End Development",
-		"title": "Undo / Redo prototype",
+		"title": "Workspace Undo",
 		"link": "http://bobbyroe.com/github/Undo-Redo-Prototype/",
 		"keywords": "UX, prototype",
-		"blurb": "A vanilla-javascript (no libraries) example of basic workspace undo and redo actions, written with Coffeescript and SASS"
+		"stuff": "",
+		"blurb": "A vanilla-javascript (no libraries) prototype of basic workspace undo and redo actions, written with CoffeeScript and SASS"
 	},
 	
 	{
@@ -12,6 +13,7 @@
 		"title": "About WebGL",
 		"link": "http://bobbyroe.com/wgl/about/",
 		"keywords": "webgl, presentation",
+		"stuff": "WebGL",
 		"blurb": "Here is an introductory presentation I gave on WebGL (without using any libraries!) see the video at vimeo.com/69136718"
 	},
 
@@ -20,6 +22,7 @@
 		"title": "Snack Nutrition Graph",
 		"link": "http://bobbyroe.com/github/Snacking-Graph/",
 		"keywords": "data_viz",
+		"stuff": "Data Viz",
 		"blurb": "A fun graph of nutrition information for the snacks at my office. It's sortable, click the boxes in the key at the bottom."
 	},
 
@@ -28,6 +31,7 @@
 		"title": "Quad Tree Visualization",
 		"link": "http://bobbyroe.com/github/Quad-Tree/",
 		"keywords": "data_viz",
+		"stuff": "CoffeeScript",
 		"blurb": "An experiment with an optimisation system for a bunch of moving things (particles)"
 	},
 
@@ -36,6 +40,7 @@
 		"title": "Popularity of JS Frameworks",
 		"link": "http://bobbyroe.com/github/Popular-JS-Frameworks/",
 		"keywords": "data_viz",
+		"stuff": "Javascript",
 		"blurb": "Wondering which Javascript framework is the most talked about on Stack Overflow? Data from May 2014"
 	},
 	
@@ -44,6 +49,7 @@
 		"title": "USA Unemployment Map",
 		"link": "http://bobbyroe.com/github/USA-Unemployment/",
 		"keywords": "data_viz",
+		"stuff": "D3.js",
 		"blurb": "An example of D3.js' mapping and animation with data from 2008. More at bl.ocks.org/mbostock/4060606"
 	},
 	
@@ -52,6 +58,7 @@
 		"title": "Tunnels",
 		"link": "http://bobbyroe.com/three/tunnels/",
 		"keywords": "THREE.js, experiment",
+		"stuff": "Three.js",
 		"blurb": "An art + code experiement with generated geometry, point lights and a flying camera"
 	},
 
@@ -60,6 +67,7 @@
 		"title": "Wireframe Globe",
 		"link": "http://bobbyroe.com/three/vector_earth/",
 		"keywords": "THREE.js, experiement",
+		"stuff": "3D",
 		"blurb": "Another experiement, this one an homage to the graphics of 'War Games' ca. 1984"
 	},
 
@@ -68,6 +76,7 @@
 		"title": "A Golden Head",
 		"link": "http://bobbyroe.com/three/head/",
 		"keywords": "THREE.js, experiement",
+		"stuff": "Gold",
 		"blurb": "Environment reflections and bump maps help sell this head model as gold"
 	},
 
@@ -76,6 +85,7 @@
 		"title": "Autodrawing Angular Lines",
 		"link": "http://bobbyroe.com/three/angular_trails/",
 		"keywords": "THREE.js, experiment",
+		"stuff": "Art from Code",
 		"blurb": "A fun art + code experiement"
 	},
 
@@ -84,6 +94,7 @@
 		"title": "Galaxy61.com",
 		"link": "http://galaxy61.com",
 		"keywords": "UX, backbone, LESS, lead",
+		"stuff": "",
 		"blurb": "This is a freelance project for a Brooklyn-based animation production studio. Dynamic and resposive design. Backbone.js, Underscore.js and jQuery provide the framework."
 	},
 	
@@ -92,6 +103,7 @@
 		"title": "RicochetMedia.net",
 		"link": "https://www.facebook.com/ricochetmedia.net",
 		"keywords": "UX, backbone, LESS, lead",
+		"stuff": "",
 		"blurb": "At NYTimes.com's R&amp;D Ventures, I lead the front-end development team on a product called Ricochet, a B2B social media marketing platform for publishers and advertisers."
 	},
 
@@ -100,6 +112,7 @@
 		"title": "TapSynth",
 		"link": "http://tapsynth.com",
 		"keywords": "mobile",
+		"stuff": "Synthesizers",
 		"blurb": " I built an iOS App from concept to App store in 2 months. TapSynth puts an exclamation mark on a year and a half of Objective-C study. Site design by Danielle Primiceri."
 	},
 
@@ -108,6 +121,7 @@
 		"title": "Introduction to Backbone.js",
 		"link": "http://www.slideshare.net/bobbyroe/backbonejs-an-introduction-14284042",
 		"keywords": "backbone, presentation",
+		"stuff": "",
 		"blurb": "A presentation at UPenn; showing off the power of Backbone.js"
 	},
 
@@ -116,6 +130,7 @@
 		"title": "NYT's Most Popular",
 		"link": "http://bobbyroe.com/nyt/viz/?test",
 		"keywords": "THREE.js, experiment",
+		"stuff": "Three.js",
 		"blurb": "This web app uses data from NYTimes.com search API to display the most popular topics. Built with Three.js and jQuery."
 	},
 	
@@ -124,6 +139,7 @@
 		"title": "CG Effects Reel",
 		"link": "http://vimeo.com/15575038",
 		"keywords": "3D",
+		"stuff": "3D",
 		"blurb": "My visual effects reel, including personal and commercial works from the past 8 years. Software skills include Maya, After Effects and Real Flow."
 	},
 
@@ -132,6 +148,7 @@
 		"title": "Pasta Sauce for Cats",
 		"link": "http://youtu.be/XPNz_FB7rM8",
 		"keywords": "3D",
+		"stuff": "",
 		"blurb": "I wrote, designed and animated this piece. Lovingly dedicated to Squeegee. Made with Maya, Shake &amp; Photoshop."
 	}]
 }

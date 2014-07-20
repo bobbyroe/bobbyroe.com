@@ -3,12 +3,29 @@
 /**/
 @import 'elements.less';
 
+@bg_color: #202020;
 @textColor: #E0E0E0;
 @headerTextColor: #707070;
 @projectTextColor: #707070;
+@brighterTextColor: #909090;
 @linkColor: #0099FF;
 @linkBright: #00CCFF; // #13c9d0;
-@HotColor: #FFCC00; 
+@HotColor: #FFCC00;
+@catBGColor: #000;
+@catTextColor: #808080;
+
+// lighter
+
+// @bg_color: #fff;
+// @textColor: #000;
+// @headerTextColor: #707070;
+// @projectTextColor: #202020;
+// @brighterTextColor: #404040;
+// @linkColor: #0044AA;
+// @linkBright: #139990;
+// @HotColor: #0099FF;
+// @catBGColor: #f0f0f0;
+// @catTextColor: #909090;
 
 .ArmataNormal (@fontSize: 1.2em) {
 	font-weight:normal; 
@@ -27,8 +44,8 @@
 }
 body {
 	.HelveticaNormal(100%);
-	color:@textColor;
-	background-color: #202020;
+	color: @textColor;
+	background-color: @bg_color;
 }
 
 /************************************************************************************
@@ -43,9 +60,9 @@ STRUCTURE
 a {
 	.transition(0.2s); 
 	text-decoration: none;
-	color:@linkColor;
+	color: @linkColor;
 	&:hover {
-		color:@HotColor; 
+		color: @HotColor; 
 	}
 }
 
@@ -64,10 +81,10 @@ a {
 			text-transform:uppercase;  
 			letter-spacing:1px;
 			.ArmataNormal (1.0em);
-			color:@linkColor;
+			color: @linkColor;
 			&:hover {
 				text-decoration:none;
-				color:@HotColor; 
+				color: @HotColor; 
 			}
 		}
 		&#home a { 
@@ -84,6 +101,8 @@ a {
 	}
 }
 
+// about heading
+
 #leader {
 	width: 100%;
 	padding:0 0 0 10px;
@@ -91,7 +110,35 @@ a {
 	float: left;
 	height: auto;
 	font-size:1.2em;
-	color: #909090;
+	color: @brighterTextColor;
+
+	div {
+		position: relative;
+	
+		#stuff {
+			.transition(0.5s);
+			position: absolute;
+			display: inline-block;
+			cursor: pointer;
+			width: 62px; // "WebGL"
+			// border: 1px solid #FFF; // debug
+			overflow: hidden;
+
+			.thing {
+				background-color: @catBGColor;
+				width: auto;
+				// border-left: 1px #F00 solid;
+
+				&.disabled {
+					color: #B0B0B0;
+					cursor: auto;
+					&:hover {
+						color: #B0B0B0;
+					}
+				}
+			}
+		}
+	}
 }
 
 #content {
@@ -110,15 +157,15 @@ a {
 			display:inline-block;
 			margin:10px 10px 0 0;
 			.ArmataNormal (2.2em);
-			color:#00ccFF; // #B0B0B0;
+			color: @linkBright;
 		}
 		h4 {
 			pointer-events: none;
 			padding:3px; 
 			.ArmataNormal (2em);  
 			display:inline-block;
-			color:#808080;
-			background-color: #000;
+			color: @catTextColor;
+			background-color: @catBGColor;
 			margin:0;
 		}
 		p {
@@ -137,7 +184,7 @@ a {
 	h2#head {
 		margin:10px 0 0px 0;
 		.ArmataNormal (1.4em); 
-		color:@headerTextColor;
+		color: @headerTextColor;
 	}
 }
 
@@ -145,12 +192,11 @@ a {
 	padding:0 10px;
 	margin: 0;
 	height:150px;
-	clear: both; /* no floating elements on either side of me, thanks */
-	// background: url(../images/BobbyHead2.png) no-repeat 20px top;
+	clear: both;
 	h2 {
 		margin: 20px 0 0 120px;
 		.ArmataNormal (1.6em); 
-		color:@headerTextColor; 
+		color: @headerTextColor; 
 	}
 	p {
 		margin: 10px 0 10px 120px;
@@ -161,7 +207,7 @@ a {
 			.ArmataNormal (0.85em);
 			float:right;
 			display:inline;
-			color:#808080; 
+			color: @catTextColor; 
 			background-color: #000;
 		}
 	}
@@ -170,7 +216,7 @@ a {
 #footer {
 	text-align:right;
 	margin: 0;
-	color:#808080;
+	color: @catTextColor;
 	clear: both;
 }
 #nav, #footer, #about { padding: 10px; }
@@ -179,7 +225,7 @@ strong {
 	text-transform:uppercase; 
 	letter-spacing:1px; 
 	.ArmataNormal (0.85em); 
-	color:@textColor;
+	color: @textColor;
 }
 
 /************************************************************************************
