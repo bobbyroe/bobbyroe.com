@@ -25,9 +25,8 @@ getProjectsJSON = function() {
 };
 
 parseJSON = function(data) {
-  var i, item, pBlurb, pCat, pImage, pLink, pTitle, projectHtml, _i, _len, _ref, _results;
+  var box, i, item, pBlurb, pCat, pImage, pLink, pTitle, projectHtml, thing, thing_el, _i, _j, _len, _len1, _ref;
   _ref = data.projects;
-  _results = [];
   for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
     item = _ref[i];
     links.push(item.link);
@@ -42,16 +41,11 @@ parseJSON = function(data) {
     pBlurb = "<p>" + item.blurb + "</p>";
     pLink = "<a href='" + item.link + "' target='_blank'>";
     projectHtml = "<div class='project' id='" + i + "'> " + pTitle + " " + pCat + " " + pBlurb + "</div>";
-    _results.push($("#content").append(projectHtml));
+    $("#content").append(projectHtml);
   }
-  return _results;
-};
-
-randomizeILikeStuff = function() {
-  var box, i, thing, thing_el, _i, _len;
   box = null;
   stuff_el.innerHTML = '';
-  for (i = _i = 0, _len = stuff.length; _i < _len; i = ++_i) {
+  for (i = _j = 0, _len1 = stuff.length; _j < _len1; i = ++_j) {
     thing = stuff[i];
     if (!(thing.name !== '')) {
       continue;
@@ -67,13 +61,16 @@ randomizeILikeStuff = function() {
       first_thing_index = i;
     }
   }
-  random_stuff_index = Math.floor(Math.random() * stuff.length);
-  current_thing = stuff[random_stuff_index];
   return stuff_el.setAttribute('style', "width: " + first_thing_index.width + "px");
 };
 
+randomizeILikeStuff = function() {
+  random_stuff_index = Math.floor(Math.random() * stuff.length);
+  return current_thing = stuff[random_stuff_index];
+};
+
 scrollILike = function() {
-  console.log(current_thing);
+  randomizeILikeStuff();
   if (current_thing.name !== '') {
     stuff_el.setAttribute('style', "width: " + current_thing.width + "px");
     stuff_el.goalScrollLeft = current_thing.left - stuff[first_thing_index].left;
@@ -94,13 +91,21 @@ likesAnimLoop = function() {
 
 init = function(data) {
   parseJSON(data);
-  randomizeILikeStuff();
   setTimeout((function() {
     return window.scrollTo(0, 1);
   }), 100);
-  return setTimeout((function() {
+  setTimeout((function() {
     return scrollILike();
   }), 1000);
+  setTimeout((function() {
+    return scrollILike();
+  }), 4000);
+  setTimeout((function() {
+    return scrollILike();
+  }), 8000);
+  return setTimeout((function() {
+    return scrollILike();
+  }), 12000);
 };
 
 onMouseOver = function(evt) {

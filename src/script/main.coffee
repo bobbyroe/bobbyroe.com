@@ -14,6 +14,9 @@ getProjectsJSON = ->
         success: init
 
 parseJSON = (data) ->
+
+    # stoke projects
+
     for item, i in data.projects
         links.push item.link
         stuff.push  name: item.stuff, left: -1, width: -1
@@ -26,7 +29,8 @@ parseJSON = (data) ->
         projectHtml = "<div class='project' id='#{i}'> #{pTitle} #{pCat} #{pBlurb}</div>"
         $("#content").append projectHtml
 
-randomizeILikeStuff = ->
+    # and stuff I like
+
     box = null
     stuff_el.innerHTML = ''
     for thing, i in stuff when thing.name isnt ''
@@ -38,15 +42,14 @@ randomizeILikeStuff = ->
         thing.left = box.left
         thing.width = box.width
         if first_thing_index is -1 then first_thing_index = i
-
-    random_stuff_index = Math.floor(Math.random() * stuff.length)
-    current_thing = stuff[random_stuff_index]
     stuff_el.setAttribute 'style', "width: #{first_thing_index.width}px"
 
+randomizeILikeStuff = ->
+    random_stuff_index = Math.floor(Math.random() * stuff.length)
+    current_thing = stuff[random_stuff_index]
+
 scrollILike = ->
-
-    console.log current_thing
-
+    randomizeILikeStuff()
     if current_thing.name isnt ''
         stuff_el.setAttribute 'style', "width: #{current_thing.width}px"
         stuff_el.goalScrollLeft = current_thing.left - stuff[first_thing_index].left
@@ -63,10 +66,12 @@ likesAnimLoop = ->
 
 init = (data) ->
     parseJSON data
-    randomizeILikeStuff()
     setTimeout (-> window.scrollTo(0, 1)), 100
 
     setTimeout (-> scrollILike()), 1000
+    setTimeout (-> scrollILike()), 4000
+    setTimeout (-> scrollILike()), 8000
+    setTimeout (-> scrollILike()), 12000
 
 onMouseOver = (evt) ->
     if evt.target.classList.contains 'project'
