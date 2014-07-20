@@ -121,10 +121,11 @@ onMouseOut = function(evt) {
 };
 
 onClick = function(evt) {
+  console.log(evt.target.classList);
   if (evt.target.classList.contains('project')) {
     window.location = links[+evt.target.id];
   }
-  if (evt.target.id === 'stuff') {
+  if (evt.target.classList.contains('thing')) {
     return window.location = links[random_stuff_index];
   }
 };

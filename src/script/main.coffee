@@ -82,10 +82,11 @@ onMouseOut = (evt) ->
         evt.target.classList.remove 'hot'
 
 onClick = (evt) ->
+    console.log evt.target.classList
     if evt.target.classList.contains 'project'
         window.location = links[+evt.target.id]
 
-    if evt.target.id is 'stuff' then window.location = links[random_stuff_index]
+    if evt.target.classList.contains 'thing' then window.location = links[random_stuff_index]
 
 $(d).ready getProjectsJSON()
 d.body.addEventListener 'mouseover', onMouseOver
