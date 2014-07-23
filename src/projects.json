@@ -19,8 +19,8 @@
 		"blurb": "A fun graph of nutrition information for the snacks at my office. It's sortable, click the boxes in the key at the bottom."
 	}, {
 		"category": "WebGL",
-		"title": "Quad Tree Visualization",
-		"link": "http://bobbyroe.com/github/Quad-Tree/",
+		"title": "Quadtree Visualization",
+		"link": "http://bobbyroe.com/github/Quadtree/",
 		"keywords": "data_viz",
 		"blurb": "An experiment with an optimisation system for a bunch of moving things (particles)"
 	}, {
