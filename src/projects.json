@@ -1,10 +1,16 @@
 {
 	"projects": [{
-		"category": "Front End Development",
-		"title": "Workspace Undo",
-		"link": "http://bobbyroe.com/github/Undo-Redo-Prototype/",
-		"keywords": "UX, prototype",
-		"blurb": "A vanilla-javascript (no libraries) prototype of basic workspace undo and redo actions, written with CoffeeScript and SASS"
+		"category": "THREE.js experiment",
+		"title": "Tunnels",
+		"link": "http://bobbyroe.com/three/tunnels/",
+		"keywords": "THREE.js, experiment",
+		"blurb": "An art + code experiement with generated geometry, point lights and a flying camera"
+	}, {
+		"category": "Data Visualization",
+		"title": "Popularity of JS Frameworks",
+		"link": "http://bobbyroe.com/github/Popular-JS-Frameworks/",
+		"keywords": "data_viz",
+		"blurb": "Wondering which Javascript framework is the most talked about on Stack Overflow? Data from May 2014"
 	}, {
 		"category": "WebGL",
 		"title": "About WebGL",
@@ -12,11 +18,11 @@
 		"keywords": "webgl, presentation",
 		"blurb": "Here is an introductory presentation I gave on WebGL (without using any libraries!) see the video at vimeo.com/69136718"
 	}, {
-		"category": "Data Visualization",
-		"title": "Snack Nutrition Graph",
-		"link": "http://bobbyroe.com/github/Snacking-Graph/",
-		"keywords": "data_viz",
-		"blurb": "A fun graph of nutrition information for the snacks at my office. It's sortable, click the boxes in the key at the bottom."
+		"category": "Front End Development",
+		"title": "Workspace Undo",
+		"link": "http://bobbyroe.com/github/Undo-Redo-Prototype/",
+		"keywords": "UX, prototype",
+		"blurb": "A vanilla-javascript (no libraries) prototype of basic workspace undo and redo actions, written with CoffeeScript and SASS"
 	}, {
 		"category": "WebGL",
 		"title": "Quadtree Visualization",
@@ -25,22 +31,10 @@
 		"blurb": "An experiment with an optimisation system for a bunch of moving things (particles)"
 	}, {
 		"category": "Data Visualization",
-		"title": "Popularity of JS Frameworks",
-		"link": "http://bobbyroe.com/github/Popular-JS-Frameworks/",
+		"title": "Snack Nutrition Graph",
+		"link": "http://bobbyroe.com/github/Snacking-Graph/",
 		"keywords": "data_viz",
-		"blurb": "Wondering which Javascript framework is the most talked about on Stack Overflow? Data from May 2014"
-	}, {
-		"category": "Data Visualization",
-		"title": "USA Unemployment Map",
-		"link": "http://bobbyroe.com/github/USA-Unemployment/",
-		"keywords": "data_viz",
-		"blurb": "An example of D3.js' mapping and animation with data from 2008. More at bl.ocks.org/mbostock/4060606"
-	}, {
-		"category": "THREE.js experiment",
-		"title": "Tunnels",
-		"link": "http://bobbyroe.com/three/tunnels/",
-		"keywords": "THREE.js, experiment",
-		"blurb": "An art + code experiement with generated geometry, point lights and a flying camera"
+		"blurb": "A fun graph of nutrition information for the snacks at my office. It's sortable, click the boxes in the key at the bottom."
 	}, {
 		"category": "THREE.js experiment",
 		"title": "Wireframe Globe",
@@ -59,6 +53,12 @@
 		"link": "http://bobbyroe.com/three/angular_trails/",
 		"keywords": "THREE.js, experiment",
 		"blurb": "A fun art + code experiement"
+	}, {
+		"category": "Data Visualization",
+		"title": "USA Unemployment Map",
+		"link": "http://bobbyroe.com/github/USA-Unemployment/",
+		"keywords": "data_viz",
+		"blurb": "An example of D3.js' mapping and animation with data from 2008. More at bl.ocks.org/mbostock/4060606"
 	}, {
 		"category": "Front End Development",
 		"title": "Galaxy61.com",
