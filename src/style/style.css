@@ -1,5 +1,5 @@
 /**/
-/* style.less : BobbyRoe.com :: July 2014 */
+/* style.less : BobbyRoe.com :: July 2015 */
 /**/
 /*---------------------------------------------------
     LESS Elements 0.9
@@ -11,8 +11,8 @@ body {
   font-weight: normal;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 100%;
-  color: #e0e0e0;
-  background-color: #202020;
+  color: #000000;
+  background-color: #ffffff;
 }
 /************************************************************************************
 STRUCTURE
@@ -32,10 +32,10 @@ a {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   text-decoration: none;
-  color: #0099ff;
+  color: #0044aa;
 }
 a:hover {
-  color: #ffcc00;
+  color: #ff4400;
 }
 #nav {
   margin-bottom: 10px;
@@ -56,14 +56,14 @@ a:hover {
   font-weight: normal;
   font-size: 1em;
   font-family: 'Armata', sans-serif;
-  color: #0099ff;
+  color: #0044aa;
 }
 #nav li a:hover {
   text-decoration: none;
-  color: #ffcc00;
+  color: #ff4400;
 }
 #nav li#home a {
-  color: #00ccff;
+  color: #139990;
 }
 #header {
   padding: 0 0 0 5px;
@@ -73,6 +73,7 @@ a:hover {
   font-weight: normal;
   font-size: 3em;
   font-family: 'Armata', sans-serif;
+  margin: 60px 0;
 }
 #leader {
   width: 100%;
@@ -81,12 +82,12 @@ a:hover {
   float: left;
   height: auto;
   font-size: 1.2em;
-  color: #909090;
+  color: #404040;
 }
-#leader div {
+#leader #stuff-tainer {
   position: relative;
 }
-#leader div #stuff {
+#leader #stuff-tainer #stuff {
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
@@ -97,15 +98,15 @@ a:hover {
   width: 62px;
   overflow: hidden;
 }
-#leader div #stuff .thing {
-  background-color: #000000;
+#leader #stuff-tainer #stuff .thing {
+  background-color: #f0f0f0;
   width: auto;
 }
-#leader div #stuff .thing.disabled {
+#leader #stuff-tainer #stuff .thing.disabled {
   color: #B0B0B0;
   cursor: auto;
 }
-#leader div #stuff .thing.disabled:hover {
+#leader #stuff-tainer #stuff .thing.disabled:hover {
   color: #B0B0B0;
 }
 #content {
@@ -130,7 +131,7 @@ a:hover {
   font-weight: normal;
   font-size: 2.2em;
   font-family: 'Armata', sans-serif;
-  color: #00ccff;
+  color: #139990;
 }
 #content .project h4 {
   pointer-events: none;
@@ -139,18 +140,18 @@ a:hover {
   font-size: 2em;
   font-family: 'Armata', sans-serif;
   display: inline-block;
-  color: #808080;
-  background-color: #000000;
+  color: #909090;
+  background-color: #f0f0f0;
   margin: 0;
 }
 #content .project p {
   pointer-events: none;
   margin: 5px 0 10px 0;
   font-size: 1.2em;
-  color: #707070;
+  color: #202020;
 }
 #content .project.hot h2 {
-  color: #ffcc00;
+  color: #ff4400;
 }
 #content h2#head {
   margin: 10px 0 0px 0;
@@ -184,13 +185,13 @@ a:hover {
   font-family: 'Armata', sans-serif;
   float: right;
   display: inline;
-  color: #808080;
+  color: #909090;
   background-color: #000;
 }
 #footer {
   text-align: right;
   margin: 0;
-  color: #808080;
+  color: #909090;
   clear: both;
 }
 #nav,
@@ -204,7 +205,7 @@ strong {
   font-weight: normal;
   font-size: 0.85em;
   font-family: 'Armata', sans-serif;
-  color: #e0e0e0;
+  color: #000000;
 }
 /************************************************************************************
 MEDIA QUERIES

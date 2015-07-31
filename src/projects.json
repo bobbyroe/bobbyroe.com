@@ -60,18 +60,6 @@
 		"keywords": "data_viz",
 		"blurb": "An example of D3.js' mapping and animation with data from 2008. More at bl.ocks.org/mbostock/4060606"
 	}, {
-		"category": "Front End Development",
-		"title": "Galaxy61.com",
-		"link": "http://galaxy61.com",
-		"keywords": "UX, backbone, LESS, lead",
-		"blurb": "This is a freelance project for a Brooklyn-based animation production studio. Dynamic and resposive design. Backbone.js, Underscore.js and jQuery provide the framework."
-	}, {
-		"category": "Front End Development",
-		"title": "RicochetMedia.net",
-		"link": "https://www.facebook.com/ricochetmedia.net",
-		"keywords": "UX, backbone, LESS, lead",
-		"blurb": "At NYTimes.com's R&amp;D Ventures, I lead the front-end development team on a product called Ricochet, a B2B social media marketing platform for publishers and advertisers."
-	}, {
 		"category": "iOS Development",
 		"title": "TapSynth",
 		"link": "http://tapsynth.com",
