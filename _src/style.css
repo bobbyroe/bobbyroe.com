@@ -1,0 +1,265 @@
+/**/
+/* style.less : BobbyRoe.com :: July 2015 */
+/**/
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+body {
+  font-weight: normal;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 100%;
+  color: #000000;
+  background-color: #ffffff;
+}
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#wrapper {
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+  width: 994px;
+  margin: 15px auto 0;
+  padding: 0;
+}
+a {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  color: #0044aa;
+}
+a:hover {
+  color: #ff4400;
+}
+#nav {
+  margin-bottom: 10px;
+  height: 20px;
+}
+#nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#nav li {
+  margin: 0 1.7em 0 0;
+  float: left;
+}
+#nav li a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 1em;
+  font-family: 'Armata', sans-serif;
+  color: #0044aa;
+}
+#nav li a:hover {
+  text-decoration: none;
+  color: #ff4400;
+}
+#nav li#home a {
+  color: #139990;
+}
+#header {
+  padding: 0 0 0 5px;
+  height: 60px;
+}
+#header h2 {
+  font-weight: normal;
+  font-size: 3em;
+  font-family: 'Armata', sans-serif;
+  margin: 60px 0;
+}
+#leader {
+  width: 100%;
+  padding: 0 0 0 10px;
+  margin: 20px 0 20px;
+  float: left;
+  height: auto;
+  font-size: 1.2em;
+  color: #404040;
+}
+#leader #stuff-tainer {
+  position: relative;
+}
+#leader #stuff-tainer #stuff {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  width: 62px;
+  overflow: hidden;
+}
+#leader #stuff-tainer #stuff .thing {
+  background-color: #f0f0f0;
+  width: auto;
+}
+#leader #stuff-tainer #stuff .thing.disabled {
+  color: #B0B0B0;
+  cursor: auto;
+}
+#leader #stuff-tainer #stuff .thing.disabled:hover {
+  color: #B0B0B0;
+}
+#content {
+  width: 100%;
+  padding: 0 0 0 10px;
+  float: left;
+}
+#content .project {
+  margin: 80px 0 20px;
+}
+#content .project:first-child {
+  margin-top: 40px;
+}
+#content .project h2 {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  pointer-events: none;
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  font-weight: normal;
+  font-size: 2.2em;
+  font-family: 'Armata', sans-serif;
+  color: #139990;
+}
+#content .project h4 {
+  pointer-events: none;
+  padding: 3px;
+  font-weight: normal;
+  font-size: 2em;
+  font-family: 'Armata', sans-serif;
+  display: inline-block;
+  color: #909090;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+#content .project p {
+  pointer-events: none;
+  margin: 5px 0 10px 0;
+  font-size: 1.2em;
+  color: #202020;
+}
+#content .project.hot h2 {
+  color: #ff4400;
+}
+#content h2#head {
+  margin: 10px 0 0px 0;
+  font-weight: normal;
+  font-size: 1.4em;
+  font-family: 'Armata', sans-serif;
+  color: #707070;
+}
+#about {
+  padding: 0 10px;
+  margin: 0;
+  height: 150px;
+  clear: both;
+}
+#about h2 {
+  margin: 20px 0 0 120px;
+  font-weight: normal;
+  font-size: 1.6em;
+  font-family: 'Armata', sans-serif;
+  color: #707070;
+}
+#about p {
+  margin: 10px 0 10px 120px;
+  font-size: 0.9em;
+  color: #B0B0B0;
+}
+#about p#foot {
+  padding: 3px;
+  font-weight: normal;
+  font-size: 0.85em;
+  font-family: 'Armata', sans-serif;
+  float: right;
+  display: inline;
+  color: #909090;
+  background-color: #000;
+}
+#footer {
+  text-align: right;
+  margin: 0;
+  color: #909090;
+  clear: both;
+}
+#nav,
+#footer,
+#about {
+  padding: 10px;
+}
+strong {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 0.85em;
+  font-family: 'Armata', sans-serif;
+  color: #000000;
+}
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* less than 1024px: iPad Portrait!!! */
+@media screen and (max-width: 1023px) {
+  #wrapper {
+    width: 738px;
+  }
+}
+/* less than 768px  iPhone Landscape!!! */
+@media screen and (max-width: 767px) {
+  #wrapper {
+    width: 450px;
+  }
+  #leader {
+    font-size: 1.2em;
+  }
+  #content .project h2 {
+    font-size: 1.7em;
+  }
+  #content .project h4 {
+    font-size: 1.3em;
+  }
+  #content .project p {
+    font-size: 1.2em;
+  }
+}
+/* less than 480px  iPhone Portrait!!! */
+@media screen and (max-width: 479px) {
+  #wrapper {
+    width: 290px;
+  }
+  #leader {
+    font-size: 1.2em;
+  }
+  #content {
+    width: auto;
+    float: none;
+  }
+  #content .project h2 {
+    font-size: 1.7em;
+  }
+  #content .project h4 {
+    font-size: 1.3em;
+  }
+  #content .project p {
+    font-size: 1.2em;
+  }
+  #nav li {
+    margin: 0 0.9em 0 0;
+  }
+  #nav li a {
+    letter-spacing: 1px;
+    font-size: 0.8em;
+  }
+}
