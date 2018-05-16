@@ -1,12 +1,6 @@
 /**/
-/* style.less : BobbyRoe.com :: July 2015 */
+/* style.less : BobbyRoe.com :: Jan 2017 */
 /**/
-/*---------------------------------------------------
-    LESS Elements 0.9
-  ---------------------------------------------------
-    A set of useful LESS mixins
-    More info at: http://lesselements.com
-  ---------------------------------------------------*/
 body {
   font-weight: normal;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -186,7 +180,7 @@ a:hover {
   float: right;
   display: inline;
   color: #909090;
-  background-color: #000;
+  background-color: #f0f0f0;
 }
 #footer {
   text-align: right;
