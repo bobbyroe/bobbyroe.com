@@ -64,11 +64,11 @@ function scrollILike () {
 }
 
 function likesAnimLoop () {
-    if (Math.abs(stuff_el.scrollLeft - stuff_el.goalScrollLeft) < 1.1) {
+    if (Math.abs(stuff_el.scrollLeft - stuff_el.goalScrollLeft) < 1.0) {
         stuff_el.scrollLeft = stuff_el.goalScrollLeft;
     } else {
         stuff_el.cur_scroll_left -= (stuff_el.cur_scroll_left -
-            stuff_el.goalScrollLeft) * 0.08;
+            stuff_el.goalScrollLeft) * 0.1;
         stuff_el.scrollLeft = stuff_el.cur_scroll_left;
         requestAnimationFrame(likesAnimLoop);
     }

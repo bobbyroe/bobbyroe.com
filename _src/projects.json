@@ -1,130 +1,144 @@
 {
-	"projects": [{
-		"category": "THREE.js experiment",
-		"title": "Tunnels",
-		"link": "http://bobbyroe.com/github/Three-Experiments/tunnels/",
-		"keywords": "THREE.js, experiment",
-		"blurb": "An art + code experiement with generated geometry, point lights and a flying camera"
-	}, {
-		"category": "Data Visualization",
-		"title": "Popularity of JS Frameworks",
-		"link": "http://bobbyroe.com/github/Popular-JS-Frameworks/",
-		"keywords": "data_viz",
-		"blurb": "Wondering which Javascript framework is the most talked about on Stack Overflow? Data from May 2014"
-	}, {
-		"category": "WebGL",
-		"title": "About WebGL",
-		"link": "http://bobbyroe.com/wgl/about/",
-		"keywords": "webgl, presentation",
-		"blurb": "Here is an introductory presentation I gave on WebGL (without using any libraries!) see the video at vimeo.com/69136718"
-	}, {
-		"category": "Front End Development",
-		"title": "Workspace Undo",
-		"link": "http://bobbyroe.com/github/Undo-Redo-Prototype/",
-		"keywords": "UX, prototype",
-		"blurb": "A vanilla-javascript (no libraries) prototype of basic workspace undo and redo actions, written with CoffeeScript and SASS"
-	}, {
-		"category": "WebGL",
-		"title": "Quadtree Visualization",
-		"link": "http://bobbyroe.com/github/Quadtree/",
-		"keywords": "data_viz",
-		"blurb": "An experiment with an optimisation system for a bunch of moving things (particles)"
-	}, {
-		"category": "Data Visualization",
-		"title": "Snack Nutrition Graph",
-		"link": "http://bobbyroe.com/github/Snacking-Graph/",
-		"keywords": "data_viz",
-		"blurb": "A fun graph of nutrition information for the snacks at my office. It's sortable, click the boxes in the key at the bottom."
-	}, {
-		"category": "THREE.js experiment",
-		"title": "Wireframe Globe",
-		"link": "http://bobbyroe.com/github/Three-Experiments/vector_earth/",
-		"keywords": "THREE.js, experiement",
-		"blurb": "Another experiement, this one an homage to the graphics of 'War Games' ca. 1984"
-	}, {
-		"category": "THREE.js experiment",
-		"title": "A Golden Head",
-		"link": "http://bobbyroe.com/github/Three-Experiments/head/",
-		"keywords": "THREE.js, experiement",
-		"blurb": "Environment reflections and bump maps help sell this head model as gold"
-	}, {
-		"category": "THREE.js experiment",
-		"title": "Autodrawing Angular Lines",
-		"link": "http://bobbyroe.com/github/Three-Experiments/angular_trails/",
-		"keywords": "THREE.js, experiment",
-		"blurb": "A fun art + code experiement"
-	}, {
-		"category": "Data Visualization",
-		"title": "USA Unemployment Map",
-		"link": "http://bobbyroe.com/github/USA-Unemployment/",
-		"keywords": "data_viz",
-		"blurb": "An example of D3.js' mapping and animation with data from 2008. More at bl.ocks.org/mbostock/4060606"
-	}, {
-		"category": "iOS Development",
-		"title": "TapSynth",
-		"link": "http://tapsynth.com",
-		"keywords": "mobile",
-		"blurb": " I built an iOS App from concept to App store in 2 months. TapSynth puts an exclamation mark on a year and a half of Objective-C study. Site design by Danielle Primiceri."
-	}, {
-		"category": "Front End Development",
-		"title": "Introduction to Backbone.js",
-		"link": "http://www.slideshare.net/bobbyroe/backbonejs-an-introduction-14284042",
-		"keywords": "backbone, presentation",
-		"blurb": "A presentation at UPenn; showing off the power of Backbone.js"
-	}, {
-		"category": "THREE.js experiment",
-		"title": "NYT's Most Popular",
-		"link": "http://bobbyroe.com/nyt/viz/?test",
-		"keywords": "THREE.js, experiment",
-		"blurb": "This web app uses data from NYTimes.com search API to display the most popular topics. Built with Three.js and jQuery."
-	}, {
-		"category": "Visual Effects",
-		"title": "CG Effects Reel",
-		"link": "http://vimeo.com/15575038",
-		"keywords": "3D",
-		"blurb": "My visual effects reel, including personal and commercial works from the past 8 years. Software skills include Maya, After Effects and Real Flow."
-	}, {
-		"category": "Animation",
-		"title": "Pasta Sauce for Cats",
-		"link": "http://youtu.be/XPNz_FB7rM8",
-		"keywords": "3D",
-		"blurb": "I wrote, designed and animated this piece. Lovingly dedicated to Squeegee. Made with Maya, Shake &amp; Photoshop."
+	"projects": [ {
+			"category": "JavaScript",
+			"title": "Brerzerk",
+			"link": "http://bobbyroe.com/github/brerzerk/",
+			"keywords": "Games, JavaScript",
+			"blurb": "STERN'S 1980 arcade classic remade with Pixi.js"
+		}, {
+			"category": "WebGL",
+			"title": "About WebGL",
+			"link": "http://bobbyroe.com/wgl/about/",
+			"keywords": "webgl, presentation",
+			"blurb": "Here is an introductory presentation I gave on WebGL (without using any libraries!) see the video at vimeo.com/69136718"
+		},
+		{
+			"category": "WebGL",
+			"title": "Quadtree Visualization",
+			"link": "http://bobbyroe.com/github/Quadtree/",
+			"keywords": "data_viz",
+			"blurb": "An experiment with an optimisation system for a bunch of moving things (particles)"
+		}, 
+		{
+			"category": "WebGL",
+			"title": "ThreeJs Sketches",
+			"link": "http://bobbyroe.com/github/webgl",
+			"keywords": "webgl, THREE.js",
+			"blurb": "My collection of 3D Sketches"
+		},
+		{
+			"category": "Data Visualisation",
+			"title": "D3js Sketches",
+			"link": "http://bobbyroe.com/wgl/github/dataviz",
+			"keywords": "data_viz",
+			"blurb": "A cluster of data visualizations"
+		},
+		{
+			"category": "iOS Development",
+			"title": "TapSynth",
+			"link": "http://bobbyroe.com/tapsynth",
+			"keywords": "mobile",
+			"blurb": " I built an iOS App from concept to App store in 2 months. TapSynth puts an exclamation mark on a year and a half of Objective-C study. Site design by Danielle Primiceri."
+		}, {
+			"category": "Front End Development",
+			"title": "Introduction to Backbone.js",
+			"link": "http://www.slideshare.net/bobbyroe/backbonejs-an-introduction-14284042",
+			"keywords": "backbone, presentation",
+			"blurb": "A presentation at UPenn; showing off the power of Backbone.js"
+		}, {
+			"category": "Visual Effects",
+			"title": "CG Effects Reel",
+			"link": "http://vimeo.com/15575038",
+			"keywords": "3D",
+			"blurb": "My visual effects reel, including personal and commercial works from the past 8 years. Software skills include Maya, After Effects and Real Flow."
+		}, {
+			"category": "Animation",
+			"title": "Pasta Sauce for Cats",
+			"link": "http://youtu.be/XPNz_FB7rM8",
+			"keywords": "3D",
+			"blurb": "I wrote, designed and animated this piece. Lovingly dedicated to Squeegee. Made with Maya, Shake &amp; Photoshop."
 	}],
 	"stuff": [{
-		"link": "http://bobbyroe.com/wgl/about/",
-		"name": "WebGL"
-	}, {
-		"link": "http://bobbyroe.com/github/Snacking-Graph/",
-		"name": "Data Viz"
-	}, {
-		"link": "http://bobbyroe.com/github/Quadtree/",
-		"name": "CoffeeScript"
-	}, {
-		"link": "http://bobbyroe.com/github/Popular-JS-Frameworks/",
-		"name": "Javascript"
-	}, {
-		"link": "http://bobbyroe.com/github/USA-Unemployment/",
-		"name": "D3.js"
-	}, {
-		"link": "http://bobbyroe.com/github/Three-Experiments/tunnels/",
-		"name": "Three.js"
-	}, {
-		"link": "http://bobbyroe.com/github/Three-Experiments/vector_earth/",
-		"name": "3D"
-	}, {
-		"link": "http://bobbyroe.com/github/Three-Experiments/head/",
-		"name": "Gold"
-	}, {
-		"link": "http://bobbyroe.com/github/Three-Experiments/angular_trails/",
-		"name": "Art from Code"
-	}, {
-		"link": "http://bobbyroe.com/tapsynth",
-		"name": "Synthesizers"
-	}, {
-		"link": "http://bobbyroe.com/nyt/viz/?test",
-		"name": "Three.js"
-	}, {
-		"link": "http://vimeo.com/15575038",
-		"name": "3D"
-	}]
+			"link": "http://bobbyroe.com/wgl/about/",
+			"name": "WebGL"
+		}, {
+			"link": "http://bobbyroe.com/github/Snacking-Graph/",
+			"name": "Data Viz"
+		}, {
+			"link": "http://bobbyroe.com/github/Quadtree/",
+			"name": "Javascript"
+		}, {
+			"link": "http://bobbyroe.com/github/Popular-JS-Frameworks/",
+			"name": "Javascript"
+		}, {
+			"link": "http://bobbyroe.com/github/USA-Unemployment/",
+			"name": "D3.js"
+		}, {
+			"link": "http://bobbyroe.com/github/Three-Experiments/tunnels/",
+			"name": "Three.js"
+		}, {
+			"link": "http://bobbyroe.com/github/Three-Experiments/vector_earth/",
+			"name": "3D"
+		}, {
+			"link": "http://bobbyroe.com/github/Three-Experiments/head/",
+			"name": "Gold"
+		}, {
+			"link": "http://bobbyroe.com/github/Three-Experiments/angular_trails/",
+			"name": "Art from Code"
+		}, {
+			"link": "http://bobbyroe.com/tapsynth",
+			"name": "Synthesizers"
+		}, {
+			"link": "http://bobbyroe.com/nyt/viz/?test",
+			"name": "Three.js"
+		}, {
+			"link": "http://vimeo.com/15575038",
+			"name": "3D"
+	}],
+	"three_sketches": [
+		{
+			"title": "NYT's Most Popular",
+			"link": "http://bobbyroe.com/nyt/viz/?test",
+			"keywords": "THREE.js, experiment",
+			"blurb": "This web app uses data from NYTimes.com search API to display the most popular topics. Built with Three.js and jQuery."
+		},
+		{
+			"title": "Tunnels",
+			"link": "http://bobbyroe.com/github/Three-Experiments/tunnels/",
+			"keywords": "THREE.js, experiment",
+			"blurb": "An art + code experiement with generated geometry, point lights and a flying camera"
+		},
+		{
+			"title": "Wireframe Globe",
+			"link": "http://bobbyroe.com/github/Three-Experiments/vector_earth/",
+			"keywords": "THREE.js, experiement",
+			"blurb": "Another experiement, this one an homage to the graphics of 'War Games' ca. 1984"
+		},
+		{
+			"title": "A Golden Head",
+			"link": "http://bobbyroe.com/github/Three-Experiments/head/",
+			"keywords": "THREE.js, experiement",
+			"blurb": "Environment reflections and bump maps help sell this head model as gold"
+		},
+		{
+			"title": "Autodrawing Angular Lines",
+			"link": "http://bobbyroe.com/github/Three-Experiments/angular_trails/",
+			"keywords": "THREE.js, experiment",
+			"blurb": "A fun art + code experiement"
+		}
+	],
+	"d3_sketches": [
+		{
+			"title": "Popularity of JS Frameworks",
+			"link": "http://bobbyroe.com/github/Popular-JS-Frameworks/",
+			"keywords": "data_viz",
+			"blurb": "Wondering which Javascript framework is the most talked about on Stack Overflow? Data from May 2014"
+		},
+		{
+			"title": "Snack Nutrition Graph",
+			"link": "http://bobbyroe.com/github/Snacking-Graph/",
+			"keywords": "data_viz",
+			"blurb": "A fun graph of nutrition information for the snacks at my office. It's sortable, click the boxes in the key at the bottom."
+		}
+	]
 }
