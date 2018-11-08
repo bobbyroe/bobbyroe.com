@@ -8,7 +8,7 @@
 		}, {
 			"category": "WebGL",
 			"title": "About WebGL",
-			"link": "http://bobbyroe.com/wgl/about/",
+			"link": "http://bobbyroe.com/about-webgl",
 			"keywords": "webgl, presentation",
 			"blurb": "Here is an introductory presentation I gave on WebGL (without using any libraries!) see the video at vimeo.com/69136718"
 		},
