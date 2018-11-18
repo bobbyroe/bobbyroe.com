@@ -1,0 +1,15 @@
+{
+    "category": "WebGL",
+    "title": "ThreeJs Sketches",
+    "link": "http://bobbyroe.com/github/webgl",
+    "keywords": "webgl, THREE.js",
+    "blurb": "My collection of 3D Sketches"
+},
+
+{
+    "category": "Data Visualisation",
+    "title": "D3js Sketches",
+    "link": "http://bobbyroe.com/wgl/github/dataviz",
+    "keywords": "data_viz",
+    "blurb": "A cluster of data visualizations"
+},

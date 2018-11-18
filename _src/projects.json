@@ -20,20 +20,6 @@
 			"blurb": "An experiment with an optimisation system for a bunch of moving things (particles)"
 		}, 
 		{
-			"category": "WebGL",
-			"title": "ThreeJs Sketches",
-			"link": "http://bobbyroe.com/github/webgl",
-			"keywords": "webgl, THREE.js",
-			"blurb": "My collection of 3D Sketches"
-		},
-		{
-			"category": "Data Visualisation",
-			"title": "D3js Sketches",
-			"link": "http://bobbyroe.com/wgl/github/dataviz",
-			"keywords": "data_viz",
-			"blurb": "A cluster of data visualizations"
-		},
-		{
 			"category": "iOS Development",
 			"title": "TapSynth",
 			"link": "http://bobbyroe.com/tapsynth",
@@ -59,42 +45,27 @@
 			"blurb": "I wrote, designed and animated this piece. Lovingly dedicated to Squeegee. Made with Maya, Shake &amp; Photoshop."
 	}],
 	"stuff": [{
-			"link": "http://bobbyroe.com/wgl/about/",
+			"link": "http://bobbyroe.com/about-webgl",
 			"name": "WebGL"
 		}, {
-			"link": "http://bobbyroe.com/github/Snacking-Graph/",
+			"link": "http://bobbyroe.com/github/aikido-techniques/",
 			"name": "Data Viz"
 		}, {
 			"link": "http://bobbyroe.com/github/Quadtree/",
 			"name": "Javascript"
 		}, {
-			"link": "http://bobbyroe.com/github/Popular-JS-Frameworks/",
-			"name": "Javascript"
-		}, {
-			"link": "http://bobbyroe.com/github/USA-Unemployment/",
-			"name": "D3.js"
-		}, {
-			"link": "http://bobbyroe.com/github/Three-Experiments/tunnels/",
-			"name": "Three.js"
-		}, {
-			"link": "http://bobbyroe.com/github/Three-Experiments/vector_earth/",
-			"name": "3D"
-		}, {
-			"link": "http://bobbyroe.com/github/Three-Experiments/head/",
-			"name": "Gold"
-		}, {
-			"link": "http://bobbyroe.com/github/Three-Experiments/angular_trails/",
-			"name": "Art from Code"
+			"link": "http://bobbyroe.com/github/aikido-techniques/",
+			"name": "Aikido"
 		}, {
 			"link": "http://bobbyroe.com/tapsynth",
 			"name": "Synthesizers"
 		}, {
-			"link": "http://bobbyroe.com/nyt/viz/?test",
+			"link": "http://bobbyroe.com/github/Three-Experiments/xmas/",
 			"name": "Three.js"
 		}, {
-			"link": "http://vimeo.com/15575038",
-			"name": "3D"
-	}],
+            "link": "http://bobbyroe.com/github/brerzerk/",
+            "name": "Games"
+        }],
 	"three_sketches": [
 		{
 			"title": "NYT's Most Popular",
