@@ -4,7 +4,8 @@
   "description": "My portfolio website",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack-dev-server --mode development"
+    "serve": "webpack-dev-server --mode development",
+    "build": "webpack --mode development"
   },
   "repository": {
     "type": "git",
