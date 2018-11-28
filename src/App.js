@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { hot } from "react-hot-loader";
 import Nav from "./Nav";
 import AboutMe from "./AboutMe";
 import MyWork from "./MyWork";
@@ -27,4 +26,4 @@ class App extends Component {
     }
 }
 
-export default hot(module)(App);
+export default App;
