@@ -45,14 +45,27 @@ const projects = [{
         keywords: "3D",
         blurb: "I wrote, designed and animated this piece. Lovingly dedicated to Squeegee. Made with Maya, Shake &amp; Photoshop."
 }];
+function handleClick (evt) {
+    window.location = projects[+evt.target.id].link;
+}
+
+function handleMouseOver (evt) {
+    evt.target.classList.add('hot');
+}
+
+function handleMouseOut (evt) {
+    evt.target.classList.remove('hot');
+}
 
 function WorkItem (props) {
-
     const { title, category, blurb } = props.project;
-
     return (
     // item.link
-        <div className='project' id={props.i}>
+        <div className='project' id={props.i} 
+            onClick={handleClick} 
+            onMouseOver={handleMouseOver} 
+            onMouseOut={handleMouseOut}
+        >
             <h2>{ title }</h2>
             <h4>{ category }</h4>
             <p>{ blurb }</p>
@@ -61,7 +74,6 @@ function WorkItem (props) {
 }
 
 function MyWork (props) {
-
     return (
         <div id="content">
             {projects.map((proj, i) => <WorkItem project={proj} key={i} i={i} /> )}
