@@ -1,34 +1,7 @@
 import React from "react"
 
-var stuff = [];
-var random_stuff_index = -1;
-var current_thing = null;
-// var stuff_el = d.querySelector('#stuff');
-
-function randomizeILikeStuff() {
-    random_stuff_index = Math.floor(Math.random() * stuff.length);
-    current_thing = stuff[random_stuff_index];
-}
-
-function scrollILike() {
-    randomizeILikeStuff();
-    stuff_el.setAttribute('style', "width: " + current_thing.width + "px");
-    stuff_el.goalScrollLeft = current_thing.left - stuff[0].left;
-    stuff_el.cur_scroll_left = stuff_el.scrollLeft;
-    likesAnimLoop();
-}
-
-function likesAnimLoop() {
-    if (Math.abs(stuff_el.scrollLeft - stuff_el.goalScrollLeft) < 1.0) {
-        stuff_el.scrollLeft = stuff_el.goalScrollLeft;
-    } else {
-        stuff_el.cur_scroll_left -= (stuff_el.cur_scroll_left -
-            stuff_el.goalScrollLeft) * 0.1;
-        stuff_el.scrollLeft = stuff_el.cur_scroll_left;
-        requestAnimationFrame(likesAnimLoop);
-    }
-}
-
+let random_stuff_index = -1;
+let current_thing = null;
 const stuff = [{
         link: "http://bobbyroe.com/about-webgl",
         name: "WebGL"
@@ -37,7 +10,7 @@ const stuff = [{
         name: "Data Viz"
     }, {
         link: "http://bobbyroe.com/github/Quadtree/",
-        name: "Javascript"
+        name: "JavaScript"
     }, {
         link: "http://bobbyroe.com/github/aikido-techniques/",
         name: "Aikido"
@@ -52,29 +25,75 @@ const stuff = [{
         name: "Games"
 }];
 
+function randomizeILikeStuff (component) {
+
+    random_stuff_index = Math.floor(Math.random() * component.stuff.length);
+    current_thing = component.stuff[random_stuff_index];
+}
+
+function scrollILike (component) {
+
+    randomizeILikeStuff(component);
+    component.el.current.setAttribute("style", `width: ${current_thing.width}px`);
+    component.el.current.goalScrollLeft = current_thing.left - component.stuff[0].left;
+    component.el.current.cur_scroll_left = component.el.current.scrollLeft;
+    likesAnimLoop();
+}
+
+function likesAnimLoop() {
+
+    if (Math.abs(component.el.current.scrollLeft - component.el.current.goalScrollLeft) < 1.0) {
+        component.el.current.scrollLeft = component.el.current.goalScrollLeft;
+    } else {
+        component.el.current.cur_scroll_left -= (component.el.current.cur_scroll_left -
+            component.el.current.goalScrollLeft) * 0.1;
+        component.el.current.scrollLeft = component.el.current.cur_scroll_left;
+        requestAnimationFrame(likesAnimLoop);
+    }
+}
+
+class Stuff extends React.Component {
+
+    constructor (props) {
+
+        super(props);
+        this.el = React.createRef();
+        this.timeout = null;
+        this.stuff = [];
+    }
+
+    componentDidMount () {
+
+        this.stuff = stuff.slice();
+        this.stuff.forEach( (thing, i) => {
+
+            let cur_thing = this.el.current.children[i];
+            let rect = cur_thing.getBoundingClientRect();
+            thing.left = rect.left;
+            thing.width = rect.width;
+        });
+
+        this.timeout = setTimeout(scrollILike, 1000, this);
+    }
+
+    render () {
+
+        return (
+            <span id="stuff" className="disabled" ref={ this.el }>
+                {stuff.map((thing, i) => <a className="thing" key={i} i={i} href={ thing.link }>
+                    {thing.name.replace(/\s/g, "\u00a0") }
+                    </a>)}
+            </span>
+        );
+    }
+}
+
 function AboutMe (props) {
-
-    // // and stuff I like
-    // var box, thing, thing_el;
-
-    // stuff_el.innerHTML = '';
-    // data.stuff.forEach(function (thing, i) {
-    //     stuff.push(thing);
-    //     thing_el = d.createElement('a');
-    //     thing_el.className = 'thing';
-    //     thing_el.innerHTML = thing.name.replace(/\s/g, '&nbsp;');
-    //     thing_el.id = i;
-    //     stuff_el.appendChild(thing_el);
-    //     box = thing_el.getBoundingClientRect();
-    //     thing.left = box.left;
-    //     thing.width = box.width;
-    // });
-    // stuff_el.setAttribute('style', "width: " + stuff[0].width + "px");
 
     return (
         <div id="leader">
             Hi, I'm a software engineer, with a strong focus on interactivity and 3D. Based in Seattle.
-                <span id="stuff-tainer"> I like <span id="stuff" className="disabled">WebGL</span>.</span>
+                <span id="stuff-tainer"> I like <Stuff />.</span>
         </div>
     );
 }
