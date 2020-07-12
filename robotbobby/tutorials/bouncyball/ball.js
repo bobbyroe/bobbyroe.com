@@ -100,7 +100,6 @@ document.body.addEventListener('keydown', (event) => {
     isPaused = !isPaused;
   }
 });
-
 document.body.addEventListener('mousedown', (event) => {
   const { x, y } = event;
   const clickedDistance = (x - pos.x) ** 2 + (y - pos.y) ** 2;
@@ -110,11 +109,9 @@ document.body.addEventListener('mousedown', (event) => {
     isDragging = true;
   }
 });
-
 document.body.addEventListener('mouseup', (event) => {
   isDragging = false;
 });
-
 document.body.addEventListener('mousemove', (event) => {
   const { x, y } = event;
   mousePos = {
@@ -130,4 +127,5 @@ loop();
 // add support for touch events
 // add squash and stretch
 // add painted walls marks
+// adjustible params, gravity, noise, bounciness
 // is this project about canvas drawing? or physics?
