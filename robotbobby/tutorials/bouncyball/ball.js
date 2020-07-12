@@ -55,8 +55,8 @@ function loop() {
   }
 
   ctx.fillStyle = 'rgba(0,0,0,0.05)';
-  // ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = 'rgba(0,0,0,1)';
   ctx.translate(pos.x, pos.y);
   ctx.translate(-canvasSize * scale.x * 0.5, -canvasSize * scale.y * 0.5);
@@ -108,6 +108,9 @@ document.body.addEventListener('mousedown', (event) => {
     isPaused = false;
     isDragging = true;
   }
+  ctx.fillStyle = 'yellow';
+  ctx.fillRect(stageRect.width * 0.5, stageRect.height * 0.5, 50, 50);
+  console.log('click');
 });
 document.body.addEventListener('mouseup', (event) => {
   isDragging = false;
