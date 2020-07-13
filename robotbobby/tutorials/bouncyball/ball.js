@@ -2,7 +2,8 @@ const canvas = document.getElementById('stage');
 canvas.width = document.body.clientWidth;
 canvas.height = document.body.clientHeight;
 const ctx = canvas.getContext('2d');
-// offscreen canvas
+
+// offscreen canvas to draw "ball"
 function fillBall() {
   offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
   offCtx.fillText('🍊', 100, 100);
@@ -16,16 +17,12 @@ offCtx.font = '150px serif';
 offCtx.textAlign = 'center';
 offCtx.textBaseline = 'middle';
 fillBall();
-ctx.strokeStyle = '#FF0000';
 
 const stageRect = canvas.getBoundingClientRect();
 const pos = { x: stageRect.width * 0.5, y: stageRect.height * 0.5 };
 const scale = { x: 1, y: 1 };
 const velocityMult = 10;
-const velocity = {
-  x: 0, // Math.random() * velocityMult - velocityMult * 0.5,
-  y: 0, // Math.random() * velocityMult - velocityMult * 0.5,
-};
+const velocity = { x: 0, y: 0 };
 const radius = 60;
 const gravity = 1.05;
 let isDragging = false;
@@ -34,6 +31,7 @@ let mousePos = {};
 const drag = 0.99;
 const goalScale = { x: 1, y: 1 };
 const scaleFactor = { x: 1, y: 1 };
+
 function loop() {
   requestAnimationFrame(loop);
   if (isPaused) {
@@ -43,7 +41,6 @@ function loop() {
     // calculate velocity
     velocity.x = mousePos.x - pos.x;
     velocity.y = mousePos.y - pos.y;
-    // set position
     pos.x = mousePos.x;
     pos.y = mousePos.y;
   } else {
@@ -54,10 +51,9 @@ function loop() {
     velocity.y *= drag;
   }
 
-  ctx.fillStyle = 'rgba(0,0,0,0.05)';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  // ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = 'rgba(0,0,0,1)';
+  // draw ball from the center
   ctx.translate(pos.x, pos.y);
   ctx.translate(-canvasSize * scale.x * 0.5, -canvasSize * scale.y * 0.5);
   ctx.drawImage(offscreen, 0, 0, canvasSize * scale.x, canvasSize * scale.y);
@@ -80,55 +76,59 @@ function loop() {
     // reverse direction
     velocity.y *= -1;
   }
-
   // keep ball from sinking through floor
   if (!hasHitBottom) {
     velocity.y += gravity;
   }
-
-  // const random = Math.random();
-  // if (random < 0.05) {
-  //   goalScale = Math.random() * 3 + 1;
-  // }
+  // squash and stretch
   scale.x -= (scale.x - goalScale.x) * 0.3;
   scale.y -= (scale.y - goalScale.y) * 0.3;
 }
-// click and keyboard event listeners
+// pointer and keyboard event listeners
 document.body.addEventListener('keydown', (event) => {
   const { key } = event;
   if (key === 'Escape') {
     isPaused = !isPaused;
   }
 });
-document.body.addEventListener('pointerdown', (event) => {
-  const { x, y } = event;
-  const clickedDistance = (x - pos.x) ** 2 + (y - pos.y) ** 2;
-  const isClicked = clickedDistance < (radius * scale.x) ** 2;
-  if (isClicked) {
-    isPaused = false;
-    isDragging = true;
-  }
-  ctx.fillStyle = 'yellow';
-  ctx.fillRect(stageRect.width * 0.5, stageRect.height * 0.5, 50, 50);
-  console.log('click');
-});
-document.body.addEventListener('pointerup', (event) => {
-  isDragging = false;
-});
-document.body.addEventListener('pointermove', (event) => {
-  const { x, y } = event;
-  mousePos = {
-    x: x,
-    y: y,
-  };
-});
+document.body.addEventListener(
+  'pointerdown',
+  (event) => {
+    const { x, y } = event;
+    const clickedDistance = (x - pos.x) ** 2 + (y - pos.y) ** 2;
+    const isClicked = clickedDistance < (radius * scale.x) ** 2;
+    if (isClicked) {
+      isPaused = false;
+      isDragging = true;
+    }
+  },
+  true
+);
+document.body.addEventListener(
+  'pointerup',
+  (event) => {
+    isDragging = false;
+  },
+  true
+);
+document.body.addEventListener(
+  'pointermove',
+  (event) => {
+    const { x, y } = event;
+    mousePos = {
+      x: x,
+      y: y,
+    };
+  },
+  true
+);
 
 // start!
 loop();
 
 // TODOs:
-// add support for touch events
-// add squash and stretch
-// add painted walls marks
 // adjustible params, gravity, noise, bounciness
+// a little hamburger menu (just like Autodesk Sketchbook)
+// add painted walls marks
 // is this project about canvas drawing? or physics?
+// why not both?
