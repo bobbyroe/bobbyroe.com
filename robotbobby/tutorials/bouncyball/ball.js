@@ -100,7 +100,7 @@ document.body.addEventListener('keydown', (event) => {
     isPaused = !isPaused;
   }
 });
-document.body.addEventListener('mousedown', (event) => {
+document.body.addEventListener('pointerdown', (event) => {
   const { x, y } = event;
   const clickedDistance = (x - pos.x) ** 2 + (y - pos.y) ** 2;
   const isClicked = clickedDistance < (radius * scale.x) ** 2;
@@ -112,10 +112,10 @@ document.body.addEventListener('mousedown', (event) => {
   ctx.fillRect(stageRect.width * 0.5, stageRect.height * 0.5, 50, 50);
   console.log('click');
 });
-document.body.addEventListener('mouseup', (event) => {
+document.body.addEventListener('pointerup', (event) => {
   isDragging = false;
 });
-document.body.addEventListener('mousemove', (event) => {
+document.body.addEventListener('pointermove', (event) => {
   const { x, y } = event;
   mousePos = {
     x: x,
