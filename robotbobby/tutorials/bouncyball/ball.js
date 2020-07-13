@@ -21,7 +21,6 @@ fillBall();
 const stageRect = canvas.getBoundingClientRect();
 const pos = { x: stageRect.width * 0.5, y: stageRect.height * 0.5 };
 const scale = { x: 1, y: 1 };
-const velocityMult = 10;
 const velocity = { x: 0, y: 0 };
 const radius = 60;
 const gravity = 1.05;
@@ -61,7 +60,6 @@ function loop() {
     scaleFactor.x = Math.min(0.5, Math.max((Math.abs(velocity.x) - 15) * 0.05, 0));
     scale.y = 1 + scaleFactor.x;
     scale.x = 1 - scaleFactor.x;
-    // reverse direction
     velocity.x *= -1;
   }
   const hasHitBottom = pos.y + velocity.y > stageRect.height - radius;
@@ -69,16 +67,16 @@ function loop() {
     scaleFactor.y = Math.min(0.5, Math.max((Math.abs(velocity.y) - 15) * 0.05, 0));
     scale.y = 1 - scaleFactor.y;
     scale.x = 1 + scaleFactor.y;
-    // reverse direction
     velocity.y *= -1;
-  }
-  // keep ball from sinking through floor
-  if (!hasHitBottom) {
-    velocity.y += gravity;
   }
   // squash and stretch
   scale.x -= (scale.x - goalScale.x) * 0.3;
   scale.y -= (scale.y - goalScale.y) * 0.3;
+
+  // keep ball from sinking through floor
+  if (!hasHitBottom) {
+    velocity.y += gravity;
+  }
 }
 // pointer event listeners
 document.body.addEventListener(
