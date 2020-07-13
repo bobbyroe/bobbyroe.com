@@ -26,7 +26,6 @@ const velocity = { x: 0, y: 0 };
 const radius = 60;
 const gravity = 1.05;
 let isDragging = false;
-let isPaused = false;
 let mousePos = {};
 const drag = 0.99;
 const goalScale = { x: 1, y: 1 };
@@ -34,9 +33,6 @@ const scaleFactor = { x: 1, y: 1 };
 
 function loop() {
   requestAnimationFrame(loop);
-  if (isPaused) {
-    return;
-  }
   if (isDragging) {
     // calculate velocity
     velocity.x = mousePos.x - pos.x;
@@ -84,13 +80,7 @@ function loop() {
   scale.x -= (scale.x - goalScale.x) * 0.3;
   scale.y -= (scale.y - goalScale.y) * 0.3;
 }
-// pointer and keyboard event listeners
-document.body.addEventListener('keydown', (event) => {
-  const { key } = event;
-  if (key === 'Escape') {
-    isPaused = !isPaused;
-  }
-});
+// pointer event listeners
 document.body.addEventListener(
   'pointerdown',
   (event) => {
@@ -98,27 +88,17 @@ document.body.addEventListener(
     const clickedDistance = (x - pos.x) ** 2 + (y - pos.y) ** 2;
     const isClicked = clickedDistance < (radius * scale.x) ** 2;
     if (isClicked) {
-      isPaused = false;
       isDragging = true;
     }
   },
   true
 );
-document.body.addEventListener(
-  'pointerup',
-  (event) => {
-    isDragging = false;
-  },
-  true
-);
+document.body.addEventListener('pointerup', (event) => (isDragging = false), true);
 document.body.addEventListener(
   'pointermove',
   (event) => {
     const { x, y } = event;
-    mousePos = {
-      x: x,
-      y: y,
-    };
+    mousePos = { x, y };
   },
   true
 );
@@ -130,5 +110,5 @@ loop();
 // adjustible params, gravity, noise, bounciness
 // a little hamburger menu (just like Autodesk Sketchbook)
 // add painted walls marks
-// is this project about canvas drawing? or physics?
-// why not both?
+// is this project about canvas drawing? or physics? – why not both?
+// accelerometer ?
