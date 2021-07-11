@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
-	<meta name="apple-mobile-web-app-capable" content="yes"/>
-	<title>Bobby Roe | Coming Soon</title>
-	<link href='http://fonts.googleapis.com/css?family=Armata|Neuton' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="favicon.ico">
-  <style>
-  body { 
-    padding: 50px;
-    font-family: 'Armata', sans-serif; 
-    text-align: left;
-    font-size: 24px;
-  }
-  h1 {
-    font-size: 48px;
-  }
-  </style>
-</head>
-<body class="bright">
-    <div id="root">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Bobby Roe | Coming Soon</title>
+    <link
+      href="http://fonts.googleapis.com/css?family=Armata|Neuton"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Armata", sans-serif;
+        text-align: left;
+        font-size: 20px;
+        background-color: #101010;
+        color: #F0F0F0;
+      }
+      header {
+        background-color: #2222cc;
+        padding: 30px;
+      }
+      main {
+        padding: 30px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 64px;
+        display: inline-block;
+      }
+      ul#nav {
+        list-style: none;
+        display: inline-block;
+        width: 170px;
+      }
+      a:visited {
+        color: #D0D0D0;
+      }
+ 
+      div#placeholder {
+        display: inline-block;
+      }
+      #tiny-canvas {
+        width: 60px;
+        height: 60px;
+        background-color: #FF0;
+      }
+    </style>
+  </head>
+  <body class="bright">
+    <header>
       <h1>Bobby Roe</h1>
-      <a href="https://github.com/bobbyroe/">Github</a>
-    </div>
-</body>
+      <ul id="nav">
+        <li><a href="https://github.com/bobbyroe/">Github</a></li>
+      </ul>
+      <div id="placeholder"><canvas id="tiny-canvas"></canvas></div>
+    </header>
+    <main>
+      <h2>Latest Video</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/V4piptMZ_C4"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      
+    </main>
+  </body>
 </html>
