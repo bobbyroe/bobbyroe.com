@@ -24,22 +24,34 @@
         background-color: #101010;
         color: #f0f0f0;
       }
+      #container {
+        width: 800px;
+        margin: 0 auto;
+        position: relative;
+      }
       header {
-        background-color: #2222cc;
-        padding: 30px;
+        background-color: #1111AA;        
       }
       main {
         padding: 30px;
       }
       h1 {
-        margin: 0;
+        margin: 0 0 0 25px;
         font-size: 64px;
         display: inline-block;
+        position: absolute;
+        top: 60%;
+        height: 100px;
+        transform: translateY(-50%);
       }
       ul#nav {
         list-style: none;
         display: inline-block;
         width: 170px;
+        position: absolute;
+        top: 48%;
+        right: 100px;
+        transform: translateY(-50%);
       }
       a:visited {
         color: #d0d0d0;
@@ -49,42 +61,49 @@
         display: inline-block;
       }
       #tiny-canvas {
-        width: 60px;
-        height: 60px;
-        background-color: #ff0;
+        width: 100px;
+        height: 100px;
       }
     </style>
   </head>
-  <body class="bright">
-    <header>
-      <h1>Bobby Roe</h1>
-      <ul id="nav">
-        <li><a href="https://github.com/bobbyroe/">Github</a></li>
-      </ul>
-      <div id="placeholder"><canvas id="tiny-canvas"></canvas></div>
-    </header>
-    <main>
-      <h2>Latest Videos – Code Art with Three.js</h2>
-      <h4>Part 1</h4>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/V4piptMZ_C4"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-      <h4>Part 2</h4>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/CQazp0y-bRw"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </main>
+  <body>
+      <header>
+        <div id="container">
+          <div id="placeholder">
+            <canvas id="tiny-canvas"></canvas>
+          </div>
+        <h1>Bobby Roe</h1>
+        <ul id="nav">
+          <li><a href="https://github.com/bobbyroe/">Github</a></li>
+        </ul>
+      </div>
+      </header>
+      <main>
+        <div id="container">
+        <h2>Latest Videos – Code Art with Three.js</h2>
+        <h4>Part 1</h4>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/V4piptMZ_C4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <h4>Part 2</h4>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/CQazp0y-bRw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      </main>
+    </div>
+    <script type="module" src="tiny-canvas.js"></script>
   </body>
 </html>
