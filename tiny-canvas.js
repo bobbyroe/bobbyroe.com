@@ -6,7 +6,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000);
 const canvas = document.getElementById('tiny-canvas');
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias:true });
-const geometry = new THREE.BoxGeometry();
+const geometry = new THREE.IcosahedronGeometry(1.0, 0.0);
 const material = new THREE.MeshNormalMaterial();
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
