@@ -1,0 +1,30 @@
+{
+  "duration": 6000,
+  "chapters": [
+    {
+      "showBorder": false,
+      "startHue": 0.0,
+      "useNoise": false,
+      "numPlanes": 20
+    },
+    {
+      "showBorder": true,
+      "startHue": 0.33,
+      "useNoise": false,
+      "numPlanes": 16
+    },
+    {
+      "showBorder": false,
+      "startHue": 0.66,
+      "useNoise": true,
+      "numPlanes": 40
+    },
+    {
+      "showBorder": true,
+      "startHue": 0.8,
+      "useNoise": true,
+      "numPlanes": 12
+    },
+    {}
+  ]
+}
