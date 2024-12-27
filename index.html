@@ -32,41 +32,41 @@
       display: grid;
       background-color: #000;
     }
-
-    main {
-      padding: 30px;
-    }
-
-    h2#hi {
-      margin-top: 0;
-    }
-
     h1 {
       font-size: 72px;
       display: inline-block;
     }
+    h2#hi {
+      margin: 0 auto 2rem;
 
-    ul#nav {
-      list-style: none;
-      display: inline-block;
-      width: 160px;
     }
-
-    a:visited {
-      color: #d0d0d0;
-    }
-
     a.little {
       font-size: 0.8em;
       margin-left: 35px;
+    }
+    .little img {
+      display: inline;
+      width: 50px;
+      height: 50px;
+    }
+    #tiny-canvas {
+      width: 100px;
+      height: 100px;
+      transform: translateY(25%);
     }
     a.coffee {
       font-size: 3em;
       margin-left: 35px;
       text-decoration: none;
     }
+    a:visited {
+      color: #d0d0d0;
+    }
     a:hover {
       filter: brightness(1.5);
+    }
+    main {
+      padding: 30px;
     }
     #youtube {
       width: 100%;
@@ -76,11 +76,6 @@
     #youtube iframe {
       width: 100%;
       height: 100%;
-    }
-    #tiny-canvas {
-      width: 100px;
-      height: 100px;
-      transform: translateY(25%);
     }
     .secondary {
       margin-top: 0;
@@ -101,7 +96,11 @@
   <header>
     <div class="container">
       <h1>Bobby Roe</h1>
-      <a href="https://github.com/bobbyroe" title="github" target="_blank"><canvas id="tiny-canvas"></canvas></a>
+      <a 
+        href="https://github.com/bobbyroe" 
+        title="github" 
+        target="_blank"
+      ><canvas id="tiny-canvas"></canvas></a>
       <a class="little" href="https://www.patreon.com/bobbyroe" title="patreon" target="_blank"><img src="./assets/Patreon.png"
           width="50" height="50" alt="Patreon Logo" /></a>
       <a class="coffee" href="https://buymeacoffee.com/bobbyroe" title="but me a coffee" target="_blank">☕</a>
