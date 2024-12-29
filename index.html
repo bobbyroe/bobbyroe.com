@@ -6,123 +6,61 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
   <meta name="mobile-web-app-capable" content="yes" />
   <title>Bobby Roe | Code Art</title>
-  <link href="https://fonts.googleapis.com/css?family=Armata|Neuton" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Armata|Neuton" rel="stylesheet" type="text/css" />   
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Armata", sans-serif;
-      text-align: left;
-      font-size: 20px;
-      background-color: #101010;
-      color: #f0f0f0;
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+        "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+      }
     }
-    img {
-      display: block;
-      max-width: 100%;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    header {
-      display: grid;
-      background-color: #000;
-    }
-    h1 {
-      font-size: 72px;
-      display: inline-block;
-    }
-    h2#hi {
-      margin: 0 auto 2rem;
-
-    }
-    a.little {
-      font-size: 0.8em;
-      margin-left: 35px;
-    }
-    .little img {
-      display: inline;
-      width: 50px;
-      height: 50px;
-    }
-    #tiny-canvas {
-      width: 100px;
-      height: 100px;
-      transform: translateY(25%);
-    }
-    a.coffee {
-      font-size: 3em;
-      margin-left: 35px;
-      text-decoration: none;
-    }
-    a:visited {
-      color: #d0d0d0;
-    }
-    a:hover {
-      filter: brightness(1.5);
-    }
-    main {
-      padding: 30px;
-    }
-    #youtube {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-    }
-    #youtube iframe {
-      width: 100%;
-      height: 100%;
-    }
-    .secondary {
-      margin-top: 0;
-      color: #B0B0B0;
-    }
-    #big {
-      color: #ff9900;
-      text-transform: uppercase;
-    }
-    #text-link {
-      color: #4099ff;
-      text-decoration: none;
-    }
-  </style>
+  </script>
 </head>
 
 <body>
+  <nav>
+    <img src="./assets/robotbobby-logo-128.png" alt="Robot Bobby Logo" />
+    <a href="#aboutme">BOBBY ROE</a>
+    <a href="https://robotbobby.thinkific.com/courses/learn-threejs-basics" title="github"  target="_blank">COURSE</a>
+    <a href="https://www.youtube.com/@robotbobby9" title="YouTube" target="_blank">VIDEOS</a>
+    <a href="https://github.com/bobbyroe" title="github"  target="_blank">GITHUB</a>
+    <a href="https://robotbobby.creator-spring.com" title="merch" target="_blank">MERCH</a>
+    <a href="https://www.patreon.com/bobbyroe" title="patreon" target="_blank">PATREON</a>
+  </nav>
   <header>
     <div class="container">
-      <h1>Bobby Roe</h1>
-      <a 
-        href="https://github.com/bobbyroe" 
-        title="github" 
-        target="_blank"
-      ><canvas id="tiny-canvas"></canvas></a>
-      <a class="little" href="https://www.patreon.com/bobbyroe" title="patreon" target="_blank"><img src="./assets/Patreon.png"
-          width="50" height="50" alt="Patreon Logo" /></a>
-      <a class="coffee" href="https://buymeacoffee.com/bobbyroe" title="but me a coffee" target="_blank">☕</a>
-      <a class="coffee" href="https://robotbobby.creator-spring.com" title="merch" target="_blank">👕</a>
-      <h2 id="hi">I show you how to code 3D graphics for fun</h2>
+      <canvas id="three-canvas"></canvas>
+      <h1 class="slab glow">Showing you how to code for fun</h1>
+      <h2 class="">Code Art, Three.js, and more</h2>
+      <a class="buttony montserrat" href="https://robotbobby.thinkific.com/enroll/3159401?price_id=4052515" target="_blank">START LEARNING</a>
     </div>
-
   </header>
+  
   <main>
     <div class="container">
+      <div id="about-me">
+        <img src="./assets/robotbobby-logo-128.png" alt="Robot Bobby Logo" />
+        <p>
+          I'm Bobby Roe, I make videos about coding, art, and technology. I'm passionate about helping others learn to code and create art. With over 20 years experience as a creative developer, I'm here to help you on your coding journey.
+        </p>
+      </div>
       <div>
-        <h2 id="big">New Course:</h2>
-        <h2>Learn Three.js Basics</h2>
+        <h1 class="slab">New Course</h2>
+        <a href="https://robotbobby.thinkific.com/enroll/3159401?price_id=4052515" target="_blank">
+          <img src="./assets/LearnThree-900.jpg" alt="Learn Three.js Course Poster with Bobby Thinking"/>
+        </a>
         <p style="color:#c0c0c0">An overview of Three.js features for coders &amp; artists who want more than “Hello World” but are not yet ready for advanced shader black magic. 
         </p>
         <a id="text-link" href="https://robotbobby.thinkific.com/enroll/3159401?price_id=4052515" target="_blank">👉🏼 robotbobby.thinkific.com</a>
         <p></p>
-        <a href="https://robotbobby.thinkific.com/enroll/3159401?price_id=4052515" target="_blank">
-          <img src="./assets/LearnThree-900.jpg" alt="Learn Three.js Course Poster with Bobby Thinking"/>
-        </a>
       </div>
-      <h2>Latest Video:</h2>
+      <h1 class="slab">Latest Video</h1>
         <div id="youtube">
           <!-- embed latest video: https://stackoverflow.com/questions/18267426/html-auto-embedding-recent-uploaded-videos-from-a-youtube-channel -->
           <iframe src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU6tSVj7pAlao-jfpka298Iw" title="YouTube video player"
@@ -133,8 +71,14 @@
         </div>
     </div>
   </main>
+  <footer>
+    <a href="https://www.youtube.com/@robotbobby9" title="YouTube" target="_blank">YouTube</a>
+    <a href="https://github.com/bobbyroe" title="github"  target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/bobbyroe/" title="LinkedIn" target="_blank">LinkedIn</a>
+    <a href="https://www.patreon.com/bobbyroe" title="patreon" target="_blank">Patreon</a>
+  </footer>
   </div>
-  <script type="module" src="tiny-canvas.js"></script>
+  <script type="module" src="index.js"></script>
 </body>
 
 </html>
