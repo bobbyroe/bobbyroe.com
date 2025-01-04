@@ -24,7 +24,7 @@ function initScene({ geo }) {
     // flatShading: true,
   });
   const mesh = new THREE.Mesh(geometry, material);
-  mesh.position.set(0.5, 2.25, 0);
+  mesh.position.set(0.9, 2.25, 0);
   scene.add(mesh);
 
   const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
