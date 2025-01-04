@@ -22,7 +22,7 @@ body {
   font-size: 20px;
   background-color: var(--background);
   color: var(--primary);
-  position: relative;
+  /* position: relative; */
 }
 img {
   display: block;
@@ -39,6 +39,9 @@ header, main {
   margin-inline: auto;
   margin-top: 5rem;
 }
+#header-main {
+  padding: 0 1rem;
+}
 nav {
   position: fixed;
   top: 0;
@@ -52,6 +55,11 @@ nav {
   box-sizing: border-box;
 }
 
+@media (max-width: 650px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
 nav img {
   height: 64px;
   display: inline;
@@ -70,11 +78,12 @@ a:hover {
   filter: brightness(1.5);
 }
 h1 {
-  max-width: 550px;
+  max-width: clamp(400px, 45vw, 600px);
   line-height: 4rem;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
-  font-size: 4rem;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  /* font-size: 6vw; */
   margin-top: 4rem;
   margin-bottom: 1rem;
 }

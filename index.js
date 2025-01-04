@@ -2,31 +2,29 @@ import * as THREE from "three";
 import getLayer from "./src/getLayer.js";
 import { OBJLoader } from "jsm/loaders/OBJLoader.js";
 import getStarfield from "./src/getStarfield.js";
-import { RoundedBoxGeometry } from "jsm/geometries/RoundedBoxGeometry.js";
 
-const parent = document.getElementsByTagName('header')[0];
-let parentRect = parent.getBoundingClientRect();
-const w = parentRect.width;
-const h = parentRect.height;
-console.log(parentRect);
+const body = document.body;
+let w = body.clientWidth;
+let h = body.clientHeight;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x2b192e);
 const camera = new THREE.PerspectiveCamera(35, w / h, 0.1, 100);
-camera.position.z = 7;
+camera.position.z = 10;
 const canvas = document.getElementById('three-canvas');
 const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
 renderer.setSize(w, h);
 
 let scrollPosY = 0;
 function initScene({ geo }) {
-  const geometry = new RoundedBoxGeometry();
+  const geometry = new THREE.TorusKnotGeometry(0.25, 0.1, 100, 16);
 //   geometry.center();
   const texLoader = new THREE.TextureLoader();
   const material = new THREE.MeshMatcapMaterial({
     matcap: texLoader.load('./assets/blue.jpg'),
+    // flatShading: true,
   });
   const mesh = new THREE.Mesh(geometry, material);
-  mesh.position.set(2.5, 0.0, 0);
+  mesh.position.set(0.5, 2.25, 0);
   scene.add(mesh);
 
   const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
@@ -35,15 +33,15 @@ function initScene({ geo }) {
   const gradientBackground = getLayer({
     hue: 0.0,
     numSprites: 8,
-    opacity: 0.1,
+    opacity: 0.2,
     radius: 10,
     size: 24,
     z: -10.5,
   });
-  // scene.add(gradientBackground);
+  scene.add(gradientBackground);
 
   const stars = getStarfield({ numStars: 4500 });
-  // scene.add(stars);
+  scene.add(stars);
 
   let goalPos = 0;
   const rate = 0.1;
@@ -75,9 +73,10 @@ window.addEventListener("scroll", () => {
 });
 
 function handleWindowResize() {
-  parentRect = parent.getBoundingClientRect();
-  camera.aspect = parentRect.width / parentRect.height;
+  w = document.body.clientWidth;
+  h = document.body.clientHeight;
+  camera.aspect = w / h;
   camera.updateProjectionMatrix();
-  renderer.setSize(parentRect.width, parentRect.height);
+  renderer.setSize(w, h);
 }
 window.addEventListener('resize', handleWindowResize, false);
