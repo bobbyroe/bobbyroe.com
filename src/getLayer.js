@@ -10,7 +10,7 @@ function getSprite({ hasFog, color, opacity, path, pos, size }) {
     transparent: true,
     opacity,
   });
-  spriteMat.color.offsetHSL(0, 0, Math.random() * 0.2 - 0.1);
+  // spriteMat.color.offsetHSL(0, 0, Math.random() * 0.2 - 0.1);
   const sprite = new THREE.Sprite(spriteMat);
   sprite.position.set(pos.x, -pos.y, pos.z);
   size += Math.random() - 0.5;
