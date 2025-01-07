@@ -37,7 +37,7 @@ header, main {
   display: grid;
   max-width: 960px;
   margin-inline: auto;
-  margin-top: 5rem;
+  margin-top: 15rem;
 }
 #header-main {
   padding: 0 1rem;
@@ -46,7 +46,8 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-around;
@@ -111,6 +112,9 @@ h2 {
   gap: 0;
   align-items: start;
 }
+#course, #video {
+  margin-top: 10rem;
+}
 #youtube {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -129,6 +133,7 @@ h2 {
   text-decoration: none;
 }
 footer {
+  margin-top: 10rem;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);

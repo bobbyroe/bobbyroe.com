@@ -66,9 +66,8 @@ const materials = [
   }),
   duckMaterial,
   // wireframe material
-  new THREE.MeshBasicMaterial({
+  new THREE.LineBasicMaterial({
     color: 0x44ccff,
-    wireframe: true,
   }),
   // blue chrome material
   new THREE.MeshPhysicalMaterial({
@@ -86,13 +85,13 @@ const geometries = [
   new RoundedBoxGeometry(1, 1, 1, 4, 0.02),
   new THREE.IcosahedronGeometry(0.75, 2),
   duckGeometry,
-  new THREE.SphereGeometry(0.75, 16, 16),
+  new THREE.EdgesGeometry(new THREE.SphereGeometry(0.75, 16, 16), 1),
   new TeapotGeometry(0.6),
 ];
 const offsets = [0, Math.PI * 0.5, Math.PI, Math.PI * 1.5, Math.PI * 2, 0, 0];
 const zPos = [0, 0, 0, 0, 2, -2];
 const radius = 2;
-let rate = 0.0005;
+let rate = 0.0001;
 
 const sceneGroup = new THREE.Group();
 sceneGroup.position.set(2.0, 5.0, 0.0);
@@ -110,7 +109,11 @@ for (let i = 0; i < geometries.length; i++) {
 }
 
 function getAnimatedInteractiveMesh(index) {
-  const mesh = new THREE.Mesh(geometries[index], materials[index]);
+  const geo = geometries[index];
+  let mesh = new THREE.Mesh(geometries[index], materials[index]);
+  if (geo.type === "EdgesGeometry") {
+    mesh = new THREE.LineSegments(geo, materials[index]);
+  }
   mesh.position.z = zPos[index];
   function update(t) {
     if (index < 4) {
