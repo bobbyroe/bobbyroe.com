@@ -11,7 +11,7 @@ let h = body.clientHeight;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x2b192e);
 const camera = new THREE.PerspectiveCamera(35, w / h, 0.1, 100);
-camera.position.z = 25;
+camera.position.z = 35;
 const canvas = document.getElementById('three-canvas');
 const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
 renderer.setSize(w, h);
@@ -94,7 +94,7 @@ const radius = 2;
 let rate = 0.0001;
 
 const sceneGroup = new THREE.Group();
-sceneGroup.position.set(2.0, 5.0, 0.0);
+sceneGroup.position.set(2.0, 8.0, 0.0);
 sceneGroup.userData.update = (t) => {
   sceneGroup.children.forEach(child => {
     child.userData.update?.(t);
