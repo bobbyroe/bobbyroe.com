@@ -90,6 +90,16 @@ h1 {
   margin-bottom: 1rem;
 }
 h2 {
+  /* max-width: clamp(200px, 50vw, 650px); */
+  /* line-height: clamp(1rem, 8vh, 12rem); */
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: clamp(1.5rem, 6vw, 7rem);
+  /* font-size: 6vw; */
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+h3 {
   margin-top: 0;
   margin-bottom: 4rem;
 }
