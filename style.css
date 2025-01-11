@@ -37,7 +37,7 @@ header, main {
   display: grid;
   max-width: 960px;
   margin-inline: auto;
-  margin-top: 15rem;
+  margin-top: 8rem;
 }
 #header-main {
   padding: 0 1rem;
