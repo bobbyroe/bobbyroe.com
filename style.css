@@ -94,7 +94,7 @@ h2 {
   /* line-height: clamp(1rem, 8vh, 12rem); */
   text-transform: uppercase;
   letter-spacing: 0.15rem;
-  font-size: clamp(1.5rem, 6vw, 7rem);
+  font-size: clamp(3rem, 6vw, 7rem);
   /* font-size: 6vw; */
   margin-top: 4rem;
   margin-bottom: 1rem;
