@@ -80,11 +80,11 @@ a:hover {
   text-decoration: underline;
 }
 h1 {
-  max-width: clamp(400px, 60vw, 750px);
-  line-height: clamp(1rem, 8vh, 12rem);
+  max-width: clamp(400px, 65vw, 600px);
+  line-height: clamp(1rem, 10vh, 16rem);
   text-transform: uppercase;
   letter-spacing: 0.15rem;
-  font-size: clamp(3rem, 8vw, 10rem);
+  font-size: clamp(4rem, 6vw, 8rem);
   /* font-size: 6vw; */
   margin-top: 4rem;
   margin-bottom: 1rem;
