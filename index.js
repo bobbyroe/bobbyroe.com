@@ -9,7 +9,7 @@ const body = document.body;
 let w = body.clientWidth;
 let h = body.clientHeight;
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x2b192e);
+scene.background = new THREE.Color(0x1b2246);
 const camera = new THREE.PerspectiveCamera(35, w / h, 0.1, 100);
 camera.position.z = 35;
 const canvas = document.getElementById('three-canvas');
@@ -18,11 +18,11 @@ renderer.setSize(w, h);
 
 let scrollPosY = 0;
 
-
 const hdrLoader = new UltraHDRLoader();
-hdrLoader.load('src/envs/san_giuseppe_bridge_2k.jpg', (hdr) => {
+hdrLoader.load('src/envs/studio_garden_4k.jpg', (hdr) => {
   hdr.mapping = THREE.EquirectangularReflectionMapping;
   scene.environment = hdr;
+  scene.environmentIntensity = 2.0;
 });
 
 const glbLoader = new GLTFLoader();
@@ -67,7 +67,7 @@ const materials = [
   duckMaterial,
   // wireframe material
   new THREE.LineBasicMaterial({
-    color: 0x44ccff,
+    color: 0x00ddff,
   }),
   // blue chrome material
   new THREE.MeshPhysicalMaterial({
@@ -83,9 +83,9 @@ const materials = [
 const geometries = [
   new THREE.TorusKnotGeometry(0.5, 0.2, 128, 64),
   new RoundedBoxGeometry(1, 1, 1, 4, 0.02),
-  new THREE.IcosahedronGeometry(0.75, 2),
+  new THREE.IcosahedronGeometry(0.75, 6),
   duckGeometry,
-  new THREE.EdgesGeometry(new THREE.SphereGeometry(0.75, 16, 16), 1),
+  new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(0.75, 2), 1),
   new TeapotGeometry(0.6),
 ];
 const offsets = [0, Math.PI * 0.5, Math.PI, Math.PI * 1.5, Math.PI * 2, 0, 0];
@@ -134,7 +134,7 @@ function getAnimatedInteractiveMesh(index) {
 const gradientBackground = getLayer({
   hue: 0.0,
   numSprites: 8,
-  opacity: 0.2,
+  opacity: 0.4,
   radius: 10,
   size: 24,
   z: -20.5,
@@ -165,3 +165,5 @@ function handleWindowResize() {
   renderer.setSize(w, h);
 }
 window.addEventListener('resize', handleWindowResize, false);
+
+// add sfx to geos
