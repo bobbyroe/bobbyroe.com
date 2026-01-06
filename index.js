@@ -1,9 +1,10 @@
 import * as THREE from "three";
-import getLayer from "./src/getLayer.js";
-import { UltraHDRLoader } from 'jsm/loaders/UltraHDRLoader.js';
-import { TeapotGeometry } from 'jsm/geometries/TeapotGeometry.js';
-import { RoundedBoxGeometry } from 'jsm/geometries/RoundedBoxGeometry.js';
-import { GLTFLoader } from 'jsm/loaders/GLTFLoader.js';
+import { UltraHDRLoader } from 'three/addons/loaders/UltraHDRLoader.js';
+import { TeapotGeometry } from 'three/addons/geometries/TeapotGeometry.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { color, pass, mrt, output, float, screenUV, uniform } from 'three/tsl';
+import { bloom } from 'three/addons/tsl/display/BloomNode.js';
 
 const body = document.body;
 let w = body.clientWidth;
@@ -13,10 +14,17 @@ scene.background = new THREE.Color(0x1b2246);
 const camera = new THREE.PerspectiveCamera(35, w / h, 0.1, 100);
 camera.position.z = 35;
 const canvas = document.getElementById('three-canvas');
-const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
+const renderer = new THREE.WebGPURenderer({ antialias: true, canvas });
 renderer.setSize(w, h);
+await renderer.init();
 
 let scrollPosY = 0;
+
+// background
+const bgColor = screenUV.y.mix(color(0x102050), color(0x102050));
+const bgVignette = screenUV.distance(.35).remapClamp(0.0, 0.6).oneMinus();
+const bgIntensity = 1;
+scene.backgroundNode = bgColor.mul(bgVignette.mul(bgIntensity));
 
 const hdrLoader = new UltraHDRLoader();
 hdrLoader.load('src/envs/studio_garden_4k.jpg', (hdr) => {
@@ -38,6 +46,14 @@ duckGlb.scene.traverse((child) => {
     duckGeometry = child.geometry.clone();
     duckGeometry.scale(0.01, 0.01, 0.01);
   }
+});
+
+const wireframeMat = new THREE.MeshBasicNodeMaterial({
+  color: 0x00ccff,
+  wireframe: true,
+});
+wireframeMat.mrtNode = mrt({
+  bloomIntensity: uniform(2.0)
 });
 
 // MATERIALS
@@ -65,10 +81,7 @@ const materials = [
     side: THREE.DoubleSide,
   }),
   duckMaterial,
-  // wireframe material
-  new THREE.LineBasicMaterial({
-    color: 0x00ddff,
-  }),
+  wireframeMat,
   // blue chrome material
   new THREE.MeshPhysicalMaterial({
     roughness: 0.0,
@@ -85,7 +98,8 @@ const geometries = [
   new RoundedBoxGeometry(1, 1, 1, 4, 0.02),
   new THREE.IcosahedronGeometry(0.75, 6),
   duckGeometry,
-  new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(0.75, 2), 1),
+  // new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(0.75, 2), 1),
+  new THREE.IcosahedronGeometry(0.75, 1),
   new TeapotGeometry(0.6),
 ];
 const offsets = [0, Math.PI * 0.5, Math.PI, Math.PI * 1.5, Math.PI * 2, 0, 0];
@@ -131,27 +145,32 @@ function getAnimatedInteractiveMesh(index) {
   return mesh;
 }
 
-const gradientBackground = getLayer({
-  hue: 0.0,
-  numSprites: 8,
-  opacity: 0.4,
-  radius: 10,
-  size: 24,
-  z: -20.5,
-});
-scene.add(gradientBackground);
+// post processing
+const scenePass = pass(scene, camera);
+scenePass.setMRT(mrt({
+  output,
+  bloomIntensity: float(0) // default bloom intensity
+}));
+
+const outputPass = scenePass.getTextureNode();
+const bloomIntensityPass = scenePass.getTextureNode('bloomIntensity');
+
+const bloomPass = bloom(outputPass.mul(bloomIntensityPass));
+
+const postProcessing = new THREE.PostProcessing(renderer);
+postProcessing.outputColorTransform = false;
+postProcessing.outputNode = outputPass.add(bloomPass).renderOutput();
 
 let goalPos = 0;
 const moveRate = 0.1;
 function animate(t = 0) {
-  requestAnimationFrame(animate);
   goalPos = Math.PI * scrollPosY;
   sceneGroup.userData.update(t);
   // mesh.rotation.y -= (mesh.rotation.y - (goalPos * 1.0)) * moveRate;
   // stars.position.z -= (stars.position.z - goalPos * 8) * moveRate;
-  renderer.render(scene, camera);
+  postProcessing.render();
 }
-animate();
+renderer.setAnimationLoop(animate);
 
 window.addEventListener("scroll", () => {
   scrollPosY = (window.scrollY / document.body.clientHeight);
@@ -166,4 +185,4 @@ function handleWindowResize() {
 }
 window.addEventListener('resize', handleWindowResize, false);
 
-// add sfx to geos
+// add sound fx to geos
