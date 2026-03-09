@@ -186,3 +186,5 @@ function handleWindowResize() {
 window.addEventListener('resize', handleWindowResize, false);
 
 // add sound fx to geos
+// subtle rapier physics interactions
+// light / dark theme toggle
