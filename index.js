@@ -5,6 +5,12 @@ import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.j
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { color, pass, mrt, output, float, screenUV, uniform } from 'three/tsl';
 import { bloom } from 'three/addons/tsl/display/BloomNode.js';
+import WebGPU from 'three/addons/capabilities/WebGPU.js';
+
+if (WebGPU.isAvailable() === false) {
+  document.body.appendChild(WebGPU.getErrorMessage());
+  throw new Error('No WebGPU support');
+}
 
 const body = document.body;
 let w = body.clientWidth;
