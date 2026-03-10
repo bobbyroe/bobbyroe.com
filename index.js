@@ -27,26 +27,53 @@ const bgIntensity = 1;
 scene.backgroundNode = bgColor.mul(bgVignette.mul(bgIntensity));
 
 const hdrLoader = new UltraHDRLoader();
-hdrLoader.load('src/envs/studio_garden_4k.jpg', (hdr) => {
-  hdr.mapping = THREE.EquirectangularReflectionMapping;
-  scene.environment = hdr;
-  scene.environmentIntensity = 2.0;
-});
-
 const glbLoader = new GLTFLoader();
 const texLoader = new THREE.TextureLoader();
 
-// load duck
-const duckGlb = await glbLoader.loadAsync('./src/Duck.glb');
-let duckMaterial = null;
-let duckGeometry = null;
-duckGlb.scene.traverse((child) => {
-  if (child.isMesh) {
-    duckMaterial = child.material.clone();
-    duckGeometry = child.geometry.clone();
-    duckGeometry.scale(0.01, 0.01, 0.01);
+function logAssetError(type, path, error) {
+  console.error(`[assets] Failed to load ${type}: ${path}`, error);
+}
+
+async function loadTextureWithFallback(paths) {
+  for (const path of paths) {
+    try {
+      return await texLoader.loadAsync(path);
+    } catch (error) {
+      logAssetError('texture', path, error);
+    }
   }
-});
+  return null;
+}
+
+try {
+  const hdr = await hdrLoader.loadAsync('src/envs/studio_garden_4k.jpg');
+  hdr.mapping = THREE.EquirectangularReflectionMapping;
+  scene.environment = hdr;
+  scene.environmentIntensity = 2.0;
+} catch (error) {
+  logAssetError('environment', 'src/envs/studio_garden_4k.jpg', error);
+}
+
+let duckMaterial = new THREE.MeshStandardMaterial({ color: 0xf6c95a, roughness: 0.35 });
+let duckGeometry = new THREE.SphereGeometry(0.65, 32, 24);
+try {
+  const duckGlb = await glbLoader.loadAsync('./src/Duck.glb');
+  duckGlb.scene.traverse((child) => {
+    if (child.isMesh) {
+      duckMaterial = child.material.clone();
+      duckGeometry = child.geometry.clone();
+      duckGeometry.scale(0.01, 0.01, 0.01);
+    }
+  });
+} catch (error) {
+  logAssetError('model', './src/Duck.glb', error);
+}
+
+const [woodMap, woodRoughnessMap, woodNormalMap] = await Promise.all([
+  loadTextureWithFallback(['./src/wood/baseColor.jpg', './src/wood/baseColor.png']),
+  loadTextureWithFallback(['./src/wood/roughness.jpg', './src/wood/roughness.png']),
+  loadTextureWithFallback(['./src/wood/normal.jpg', './src/wood/normal.png']),
+]);
 
 const wireframeMat = new THREE.MeshBasicNodeMaterial({
   color: 0x00ccff,
@@ -67,9 +94,9 @@ const materials = [
   }),
   // wood material
   new THREE.MeshStandardMaterial({
-    map: texLoader.load('./src/wood/baseColor.png'),
-    roughnessMap: texLoader.load('./src/wood/roughness.png'),
-    normalMap: texLoader.load('./src/wood/normal.png'),
+    map: woodMap,
+    roughnessMap: woodRoughnessMap,
+    normalMap: woodNormalMap,
     normalScale: new THREE.Vector2(6, 6),
   }),
   // glass material
