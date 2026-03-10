@@ -127,6 +127,32 @@ h3 {
 #course, #video, #testimonials {
   margin-top: 10rem;
 }
+#newsletter {
+  margin-top: 5rem;
+  padding: 1rem 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#newsletter h2 { 
+  margin-top: 2rem;
+}
+.newsletter-kit-hack {
+  margin-left: 10px;
+}
+#newsletter-fallback {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #cccccc;
+}
+#newsletter-fallback a {
+  font-size: 0.9rem;
+  color: #7db7ff;
+}
+
+@media (max-width: 650px) {
+  #newsletter {
+    padding: 1.25rem;
+  }
+}
 #youtube {
   width: 100%;
   aspect-ratio: 16 / 9;
