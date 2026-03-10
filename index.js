@@ -129,7 +129,7 @@ const geometries = [
   new THREE.IcosahedronGeometry(0.75, 1),
   new TeapotGeometry(0.6),
 ];
-const offsets = [0, Math.PI * 0.5, Math.PI, Math.PI * 1.5, Math.PI * 2, 0, 0];
+const offsets = [0, Math.PI * 0.5, Math.PI, Math.PI * 1.5, Math.PI * 2, 0];
 const zPos = [0, 0, 0, 0, 2, -2];
 const radius = 2;
 let rate = 0.0001;
@@ -162,12 +162,8 @@ function getAnimatedInteractiveMesh(index) {
       mesh.position.y = Math.sin(t * rate + offsets[index]) * radius;
     }
   }
-  function toggle(isPointerDown) {
-    mesh.material.wireframe = isPointerDown;
-  }
   mesh.userData = {
     update,
-    toggle,
   }
   return mesh;
 }
@@ -188,13 +184,8 @@ const postProcessing = new THREE.PostProcessing(renderer);
 postProcessing.outputColorTransform = false;
 postProcessing.outputNode = outputPass.add(bloomPass).renderOutput();
 
-let goalPos = 0;
-const moveRate = 0.1;
 function animate(t = 0) {
-  goalPos = Math.PI * scrollPosY;
   sceneGroup.userData.update(t);
-  // mesh.rotation.y -= (mesh.rotation.y - (goalPos * 1.0)) * moveRate;
-  // stars.position.z -= (stars.position.z - goalPos * 8) * moveRate;
   postProcessing.render();
 }
 renderer.setAnimationLoop(animate);
