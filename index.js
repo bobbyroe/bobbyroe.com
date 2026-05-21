@@ -19,7 +19,11 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(35, w / h, 0.1, 100);
 camera.position.z = 35;
 const canvas = document.getElementById('three-canvas');
-const renderer = new THREE.WebGPURenderer({ antialias: true, canvas });
+const renderer = new THREE.WebGPURenderer({ 
+  antialias: true, 
+  canvas, 
+  alpha: true 
+});
 renderer.setSize(w, h);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 await renderer.init();
@@ -83,9 +87,9 @@ const wireframeMat = new THREE.MeshBasicNodeMaterial({
   color: 0x00ccff,
   wireframe: true,
 });
-wireframeMat.mrtNode = mrt({
-  bloomIntensity: uniform(2.0)
-});
+// wireframeMat.mrtNode = mrt({
+//   bloomIntensity: uniform(2.0)
+// });
 
 // MATERIALS
 const materials = [
@@ -133,12 +137,12 @@ const geometries = [
   new TeapotGeometry(0.6),
 ];
 const offsets = [0, Math.PI * 0.5, Math.PI, Math.PI * 1.5, Math.PI * 2, 0];
-const zPos = [0, 0, 0, 0, 2, -2];
+const zPos = [0, 0, 0, 0, 1.5, -1.5];
 const radius = 2;
 let rate = 0.0001;
 
 const sceneGroup = new THREE.Group();
-sceneGroup.position.set(2.0, 8.0, 0.0);
+sceneGroup.position.set(1.5, 7.5, 0.0);
 sceneGroup.userData.update = (t) => {
   sceneGroup.children.forEach(child => {
     child.userData.update?.(t);
@@ -185,7 +189,8 @@ postProcessing.outputNode = outputPass.add(bloomPass).renderOutput();
 
 function animate(t = 0) {
   sceneGroup.userData.update(t);
-  postProcessing.render();
+  // postProcessing.render();
+  renderer.render(scene, camera);
 }
 renderer.setAnimationLoop(animate);
 

@@ -3,14 +3,13 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <title>Bobby Roe | Code Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bobby Roe — Code Art</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Armata&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap">
+  <link rel="icon" type="image/svg+xml" href="./three.svg" />
   <link rel="stylesheet" href="style.css" />
   <script type="importmap">
       {
@@ -22,146 +21,220 @@
         }
       }
     </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T31H2212TQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-T31H2212TQ');
-  </script>
 </head>
 
 <body>
-  <canvas id="three-canvas"></canvas>
-  <nav>
-    <img src="./assets/robotbobby-logo-128.png" alt="Robot Bobby Logo" />
-    <a class="mobile-hidden" href="#about-here">BOBBY ROE</a>
-    <a href="https://robotbobby.thinkific.com/courses/learn-threejs-basics" title="github" target="_blank"
-    >COURSE</a>
-    <a href="https://www.youtube.com/@robotbobby9" title="YouTube" target="_blank">VIDEOS</a>
-    <a class="mobile-hidden" href="https://github.com/bobbyroe" title="github" target="_blank"
-    >GITHUB</a>
-    <a class="mobile-hidden" href="https://bobbyroe-shop.fourthwall.com/" title="merch" target="_blank"
-    >MERCH</a>
-    <a href="https://www.patreon.com/c/RobotBobby" title="patreon" target="_blank">PATREON</a>
-  </nav>
-  <header>
-    <div id="header-main">
 
-      <h1 class="slab glow">Learn to create stunning 3D</h1>
-      <h3 class="">With Three.js, R3F and more</h3>
-      <a class="buttony montserrat" id="about-here" href="https://robotbobby.thinkific.com/courses/learn-threejs-basics"
-        target="_blank">START LEARNING</a>
+  <canvas id="three-canvas"></canvas>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <img src="assets/robotbobby-logo-128.png" alt="Robot Bobby" />
+        <span class="brand-name">Bobby Roe</span>
+      </a>
+      <div class="nav-links">
+        <a href="#course">Course</a>
+        <a href="#video">Videos</a>
+        <a class="opt" href="https://github.com/bobbyroe" target="_blank">GitHub</a>
+        <a class="opt" href="https://bobbyroe-shop.fourthwall.com/" target="_blank">Merch</a>
+        <a href="https://www.patreon.com/c/RobotBobby" target="_blank">Patreon</a>
+      </div>
     </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div>
+      <div class="eyebrow">Code · Art · Three.js</div>
+      <h1>Turn your ideas into<br />stunning <em>3D&nbsp;on the&nbsp;web</em></h1>
+      <p class="lede">Learn to create real-time 3D goodness with Three.js.
+Tutorials, experiments, and inspiring content.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://robotbobby.thinkific.com/courses/learn-threejs-basics" target="_blank"
+        >
+          Start the course <span class="arrow">→</span>
+        </a>
+        <a class="btn btn-ghost" href="https://www.youtube.com/@robotbobby9" target="_blank">
+          Watch on YouTube
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div><b>20+ yrs</b>creative dev</div>
+        <div><b>100+</b>tutorials</div>
+        <div><b>40k+</b>students &amp; subs</div>
+      </div>
+    </div>
+
+    <!-- <div class="hero-viz" aria-hidden="true">
+      <div class="shape shape-knot"></div>
+      <div class="shape shape-cube"></div>
+      <div class="shape shape-duck"></div>
+      <div class="shape shape-wire"></div>
+      <div class="viz-label">WebGPU · Three.js scene</div>
+    </div> -->
   </header>
 
-  <main>
-    <div class="container">
-      <div id="about-me">
-        <img src="./assets/robotbobby-logo-128.png" alt="Robot Bobby Logo" />
-        <p>
-          I'm Bobby Roe, I make videos about coding, art, and technology. I'm here to help you on your coding journey.
-          With over 20 years experience as a creative developer, I've helped thousands learn to code and create art.
-        </p>
-      </div>
-      <div id="course">
-        <h2 class="slab">Course</h2>
-        <a href="https://robotbobby.thinkific.com/courses/learn-threejs-basics" target="_blank"
-        >
-          <img src="./assets/LearnThree-900.jpg" alt="Learn Three.js Course Poster with Bobby Thinking" />
-        </a>
-        <p>An overview of Three.js features for coders &amp; artists who want more than “Hello World” but are not yet
-          ready for advanced shader black magic.
-        </p>
-        <a id="text-link" href="https://robotbobby.thinkific.com/courses/learn-threejs-basics" target="_blank"
-        >👉🏼
-          robotbobby.thinkific.com</a>
-        <p></p>
-      </div>
+  <!-- INTRO CARD -->
+  <section class="intro">
+    <div class="intro-card">
+      <img src="assets/robotbobby-logo-128.png" alt="" />
+      <p>
+        I'm <b>Bobby Roe</b>. I make videos about coding, art, and technology — and I'm here to help on your coding
+        journey.
+        <span>20+ years as a creative developer; I've helped thousands learn to code and create art.</span>
+      </p>
+    </div>
+  </section>
 
-      <!-- <section id="newsletter">
-          <h2 class="slab newsletter-kit-hack">Stay Connected</h2>
-          <p class="newsletter-kit-hack">
-            Get practical Three.js tips and guides, new tutorials, and more.<br />
-            1–2 emails per month.
-          </p>
-        <script async data-uid="5add6c360d" src="https://robot-bobby.kit.com/5add6c360d/index.js"></script>
-        <p id="newsletter-fallback" class="newsletter-kit-hack">
-          No spam, unsubscribe anytime. &mdash; Don't see the form? <a href="https://robot-bobby.kit.com/e5f2b1ab96" target="_blank"> open direct signup form</a>.
-        </p>
-      </section> -->
+  <!-- COURSE -->
+  <section class="section" id="course">
+    <div class="section-head">
+      <span class="section-num">01 /</span>
+      <h2 class="section-title">Course</h2>
+      <a class="section-link" href="https://robotbobby.thinkific.com/courses/learn-threejs-basics" target="_blank"
+      >Open on Thinkific</a>
+    </div>
 
-      <div id="testimonials">
-        <h2 class="slab">TESTIMONIALS</h2>
-        <div id="cards">
-          <div class="testimonial-card">
-            <p>"... Special thanks to @robotbobby9 for this <a href="https://youtu.be/h1UQdbuF204" target="_blank"
-              >amazing tutorial</a>"</p>
-            <span>- @BeautyInMath</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"Thank you so much for the incredible work, Bobby! 😅🙏🏻"</p>
-            <span>- @dalanxd</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"thank you so much, this channel is a gift"</p>
-            <span>- @abs.Time_.-----.....-----__</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"love all you tutorial, this become my threejs reference channel.. "</p>
-            <span>- @gusmayadi</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"Amazing sir!😁😁😁😁"</p>
-            <span>- @SimeonFalnyi</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"You are an awesome human for sharing the knowledge and allowing us to code along while figuring it
-              out. I have improved by leaps and bounds watching your videos! Much respect!!!!!"</p>
-            <span>- @jermaineallgood</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"simple and fast video!! loved the glow effect :)"</p>
-            <span>- @SaaSAround</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"Brilliant video - love subtle effects with the lighting and glow. "</p>
-            <span>- @samh21</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"This is awesome. The versatility of the effect as you tweak colors, amplitude, time delta, or camera
-              angle is really something you can only get from 3D. Thank you very much for the video!"</p>
-            <span>- @NoIngNames</span>
-          </div>
-          <div class="testimonial-card">
-            <p>"This tutorial is simply great. Simple and great. loved it ❤️!"</p>
-            <span>- @anikrana84</span>
-          </div>
+    <div class="course-grid">
+      <a class="course-poster" href="https://robotbobby.thinkific.com/courses/learn-threejs-basics" target="_blank"
+      >
+        <span class="badge">Enrollment open</span>
+        <img src="assets/LearnThree-900.jpg" alt="Learn Three.js Basics course poster" />
+      </a>
 
-        </div>
-      </div>
+      <div class="course-body">
+        <h3>Learn Three.js — the Basics</h3>
+        <p class="tagline">An overview of Three.js for coders &amp; artists who want more than “Hello World” but aren't
+          ready for advanced shader black magic — yet.</p>
 
-      <div id="video">
-        <h2 class="slab">Latest Video</h2>
-        <div id="youtube">
-          <!-- embed latest video: https://stackoverflow.com/questions/18267426/html-auto-embedding-recent-uploaded-videos-from-a-youtube-channel -->
-          <iframe src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU6tSVj7pAlao-jfpka298Iw"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+        <ul class="course-features">
+          <li>Build complete interactive 3D scenes from scratch</li>
+          <li>Lighting, materials &amp; geometry — without the math overload</li>
+          <li>Optimizations, performance tips & best practices</li>
+          <!-- <li>Lifetime access &amp; a private community to ask questions in</li> -->
+        </ul>
+
+        <div class="course-cta">
+          <a class="btn btn-primary" href="https://robotbobby.thinkific.com/courses/learn-threejs-basics"
+            target="_blank">
+            Enroll now <span class="arrow">→</span>
+          </a>
+          <span class="course-meta">Self-paced · Code along</span>
         </div>
       </div>
     </div>
-  </main>
-  <footer>
-    <a href="https://www.youtube.com/@robotbobby9" title="YouTube" target="_blank">YouTube</a>
-    <a href="https://github.com/bobbyroe" title="github" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/bobbyroe/" title="LinkedIn" target="_blank"
-    >LinkedIn</a>
-    <a href="https://www.patreon.com/c/RobotBobby" title="patreon" target="_blank">Patreon</a>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="section-head">
+      <span class="section-num">02 /</span>
+      <h2 class="section-title">From the comments</h2>
+      <!-- <a class="section-link" href="https://www.youtube.com/@robotbobby9/community" target="_blank"
+      >Read more</a> -->
+    </div>
+
+    <div class="quote-grid">
+      <div class="quote">
+        <p>Special thanks to @robotbobby9 for this amazing tutorial.</p><cite>@BeautyInMath</cite>
+      </div>
+      <div class="quote">
+        <p>Thank you so much for the incredible work, Bobby!</p><cite>@dalanxd</cite>
+      </div>
+      <div class="quote">
+        <p>Thank you so much — this channel is a gift.</p><cite>@abs.Time</cite>
+      </div>
+      <div class="quote">
+        <p>Love all your tutorials. This has become my Three.js reference channel.</p><cite>@gusmayadi</cite>
+      </div>
+      <div class="quote">
+        <p>You're an awesome human for sharing the knowledge and letting us code along while you figure it out. Much
+          respect.</p><cite>@jermaineallgood</cite>
+      </div>
+      <div class="quote">
+        <p>Simple and fast video — loved the glow effect :)</p><cite>@SaaSAround</cite>
+      </div>
+      <div class="quote">
+        <p>Brilliant video — love the subtle effects with the lighting and glow.</p><cite>@samh21</cite>
+      </div>
+      <div class="quote">
+        <p>The versatility of the effect as you tweak colors, amplitude, time delta, or camera angle is something you
+          can only get from 3D. Thank you.</p><cite>@NoIngNames</cite>
+      </div>
+      <div class="quote">
+        <p>This tutorial is simply great. Simple and great. Loved it.</p><cite>@anikrana84</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section" id="video">
+    <div class="section-head">
+      <span class="section-num">03 /</span>
+      <h2 class="section-title">Latest from YouTube</h2>
+      <a class="section-link" href="https://www.youtube.com/@robotbobby9" target="_blank">Channel</a>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU6tSVj7pAlao-jfpka298Iw"
+          title="Latest from Robot Bobby" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <!-- <aside class="video-side">
+        <h4>This week</h4>
+        <div class="topic">Insane performance with Three.js — #threejs #webgpu #javascript</div>
+        <div class="sub-meta"><span><b>Robot Bobby</b></span><span>New videos weekly</span></div>
+        <a class="subscribe" href="https://www.youtube.com/@robotbobby9?sub_confirmation=1" target="_blank"
+        >
+          ▶ Subscribe
+        </a>
+      </aside> -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <img src="assets/robotbobby-logo-128.png" alt="" />
+          <span class="brand-name">Bobby Roe</span>
+        </a>
+        <p>Creative developer. Aikido Nut job. I make learning hard stuff fun.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="https://robotbobby.thinkific.com/courses/learn-threejs-basics" target="_blank"
+            >Course</a></li>
+          <li><a href="https://www.youtube.com/@robotbobby9" target="_blank">YouTube</a></li>
+          <li><a href="https://github.com/bobbyroe" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="https://www.patreon.com/c/RobotBobby" target="_blank">Patreon</a></li>
+          <li><a href="https://bobbyroe-shop.fourthwall.com/" target="_blank">Merch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Elsewhere</h5>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/bobbyroe/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Bobby Roe</span>
+      <span>Built with Three.js · WebGPU</span>
+    </div>
   </footer>
+
+  <!-- 3D scene loader stays compatible with index.js -->
   <script type="module" src="index.js"></script>
 </body>
 
