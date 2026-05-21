@@ -16,7 +16,6 @@ const body = document.body;
 let w = body.clientWidth;
 let h = body.clientHeight;
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x1b2246);
 const camera = new THREE.PerspectiveCamera(35, w / h, 0.1, 100);
 camera.position.z = 35;
 const canvas = document.getElementById('three-canvas');
@@ -24,10 +23,8 @@ const renderer = new THREE.WebGPURenderer({ antialias: true, canvas });
 renderer.setSize(w, h);
 await renderer.init();
 
-let scrollPosY = 0;
-
 // background
-const bgColor = screenUV.y.mix(color(0x102050), color(0x102050));
+const bgColor = screenUV.y.mix(color(0x050a1e), color(0x102050));
 const bgVignette = screenUV.distance(.35).remapClamp(0.0, 0.6).oneMinus();
 const bgIntensity = 1;
 scene.backgroundNode = bgColor.mul(bgVignette.mul(bgIntensity));
@@ -131,7 +128,6 @@ const geometries = [
   new RoundedBoxGeometry(1, 1, 1, 4, 0.02),
   new THREE.IcosahedronGeometry(0.75, 6),
   duckGeometry,
-  // new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(0.75, 2), 1),
   new THREE.IcosahedronGeometry(0.75, 1),
   new TeapotGeometry(0.6),
 ];
@@ -156,11 +152,7 @@ for (let i = 0; i < geometries.length; i++) {
 }
 
 function getAnimatedInteractiveMesh(index) {
-  const geo = geometries[index];
-  let mesh = new THREE.Mesh(geometries[index], materials[index]);
-  if (geo.type === "EdgesGeometry") {
-    mesh = new THREE.LineSegments(geo, materials[index]);
-  }
+  const mesh = new THREE.Mesh(geometries[index], materials[index]);
   mesh.position.z = zPos[index];
   function update(t) {
     if (index < 4) {
@@ -195,10 +187,6 @@ function animate(t = 0) {
   postProcessing.render();
 }
 renderer.setAnimationLoop(animate);
-
-window.addEventListener("scroll", () => {
-  scrollPosY = (window.scrollY / document.body.clientHeight);
-});
 
 function handleWindowResize() {
   w = document.body.clientWidth;
