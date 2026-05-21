@@ -21,6 +21,7 @@ camera.position.z = 35;
 const canvas = document.getElementById('three-canvas');
 const renderer = new THREE.WebGPURenderer({ antialias: true, canvas });
 renderer.setSize(w, h);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 await renderer.init();
 
 // background
@@ -194,6 +195,7 @@ function handleWindowResize() {
   camera.aspect = w / h;
   camera.updateProjectionMatrix();
   renderer.setSize(w, h);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 }
 window.addEventListener('resize', handleWindowResize, false);
 
